@@ -20,7 +20,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // app.use(enforce.HTTPS({ trustProtoHeader: true }));
-// app.use(compression());
+app.use(compression());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -42,6 +42,12 @@ app.use((req, res, next) => {
 // if (process.env.NODE_ENV === 'production') {
 // 	app.use(express.static(path.join(__dirname, 'client/build')));
 
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('client/build'));
+}
+app.get('*', (request, response) => {
+	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
 app.get('/robots.txt', (req, res) => {
 	res.sendFile(path.join(__dirname, 'client/build', 'robots.txt'));
 });
