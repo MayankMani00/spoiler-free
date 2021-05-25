@@ -24,7 +24,7 @@ function SearchPage({ query, searchResult, setSearchResult }) {
 		notificationMessage,
 		setNotificationMessage
 	] = useState(null);
-	const timer = setTimeout(() => {
+	const timer = setIntreval(() => {
 		if (time == Date.now()) setStuck(true);
 	}, 1000);
 	useEffect(
@@ -38,14 +38,14 @@ function SearchPage({ query, searchResult, setSearchResult }) {
 			})
 				.then((response) => {
 					setSearchResult({ ...response.data });
-					clearTimeout(timer);
+					clearInterval(timer);
 				})
 				.catch((error) => {
 					setNotificationMessage(e.response.data.message);
 					setInterval(() => {
 						setNotificationMessage(null);
 					}, 5000);
-					clearTimeout(timer);
+					clearInterval(timer);
 				});
 		},
 		[
@@ -53,6 +53,7 @@ function SearchPage({ query, searchResult, setSearchResult }) {
 		]
 	);
 	if (stuck) {
+		clearInterval(timer);
 		setNotificationMessage('An error occurred :(');
 		setInterval(() => {
 			setNotificationMessage(null);
