@@ -14,7 +14,7 @@ const JoinButton = ({ username, addRoom, target, rooms }) => {
 		setNotificationMessage
 	] = useState();
 	const handleClick = async (target) => {
-		const found = rooms.find((el) => el.id == target.id);
+		const found = rooms.find((el) => el.id === target.id);
 		if (!!found) {
 			setNotificationMessage('You are already in this room!');
 			setTimeout(() => {

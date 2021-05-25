@@ -7,7 +7,6 @@ import JoinButton from '../../components/JoinButton/JoinButton';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
 import ReactHtmlParser from 'react-html-parser';
 
 import './ShowDetails.css';
@@ -60,7 +59,7 @@ const ShowDetails = () => {
 						justifyContent : 'center'
 					}}
 				>
-					<img className="show-img" src={image} />
+					<img className="show-img" src={image} alt={name} />
 				</Container>
 				<Container maxWidth="md" style={{ justifyContent: 'center' }}>
 					<Typography
@@ -114,7 +113,7 @@ const ShowDetails = () => {
 									justifyContent : 'space-between',
 									alignItems     : 'center',
 									margin         : '2px',
-									marginTop      : `${1 == episode.number
+									marginTop      : `${1 === episode.number
 										? '10px'
 										: '0'}`,
 									padding        : '5px 10px'

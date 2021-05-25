@@ -52,7 +52,7 @@ const BookDetails = () => {
 					justifyContent : 'center'
 				}}
 			>
-				<img className="book-img" src={thumbnail} />
+				<img className="book-img" src={thumbnail} alt={title} />
 			</Container>
 			<Container maxWidth="md" style={{ justifyContent: 'center' }}>
 				<Typography

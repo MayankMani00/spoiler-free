@@ -1,15 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import RoomChat from './RoomChat';
 
 import { connect } from 'react-redux';
 import { userChatToggle } from '../../redux/user/user.action';
 
-import Drawer from '@material-ui/core/Drawer';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import CloseIcon from '@material-ui/icons/Close';
@@ -30,7 +25,7 @@ const Sidebar = ({ rooms, userChatToggle }) => {
 	return (
 		<div className="chat-popup">
 			<div className="chat-navbar">
-				{openRoomId != -1 && (
+				{openRoomId !== -1 && (
 					<IconButton>
 						<ArrowBackIosIcon
 							style={{ color: 'white' }}
@@ -48,12 +43,12 @@ const Sidebar = ({ rooms, userChatToggle }) => {
 					<CloseIcon style={{ color: 'white' }} />
 				</IconButton>
 			</div>
-			{rooms.length == 0 && (
+			{rooms.length === 0 && (
 				<div style={{ padding: '1rem' }}>
 					Join a room to get started!
 				</div>
 			)}
-			{openRoomId == -1 ? (
+			{openRoomId === -1 ? (
 				<ul className="room-list">
 					{rooms.map((item) => (
 						<React.Fragment>

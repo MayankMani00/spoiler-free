@@ -127,14 +127,16 @@ const RoomChat = ({ username, room, socket }) => {
 		<div className="roomchat-container">
 			<div className="messages-scroller">
 				<div className="messages-container">
-					{messages.length != 0 &&
+					{messages.length !== 0 &&
 						messages.map((item) => (
 							<div className="message">
 								<p
 									className="name"
 									style={{
 										color :
-											item.sentBy == username ? 'red' : ''
+											item.sentBy === username
+												? 'red'
+												: ''
 									}}
 								>
 									{item.sentBy}

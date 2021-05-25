@@ -21,7 +21,7 @@ const ShowPreview = ({ show }) => {
 
 	return (
 		<div className="show-card">
-			<img className="show-card-img" src={thumbnail} />
+			<img className="show-card-img" src={thumbnail} alt={name} />
 			<Link to={`/show/${id}`}>
 				<h3 className="show-card-title">{name}</h3>
 			</Link>

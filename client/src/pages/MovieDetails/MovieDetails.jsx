@@ -9,7 +9,6 @@ import Paper from '@material-ui/core/Paper';
 import axios from 'axios';
 
 import './MovieDetails.css';
-import Button from '@material-ui/core/Button';
 
 const MovieDetails = () => {
 	const [

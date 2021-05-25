@@ -16,11 +16,10 @@ const BookPreview = (book) => {
 		: 'No description available';
 
 	if (!!volumeInfo.imageLinks) thumbnail = volumeInfo.imageLinks.thumbnail;
-	const extra = <p>I will come back</p>;
 
 	return (
 		<div className="book-card">
-			<img className="book-card-img" src={thumbnail} />
+			<img className="book-card-img" src={thumbnail} alt={title} />
 			<Link to={`/book/${id}`}>
 				<h3 className="book-card-title">{title}</h3>
 			</Link>

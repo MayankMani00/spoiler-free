@@ -46,7 +46,7 @@ function SearchPage({ query, searchResult, setSearchResult }) {
 					category="Books"
 					results={searchResult.books.items.slice(0, 5)}
 				/>
-				{searchResult.movies.Response == 'True' ? (
+				{searchResult.movies.Response === 'True' ? (
 					<SearchOverview
 						category="Movies"
 						results={searchResult.movies.Search.slice(0, 5)}
