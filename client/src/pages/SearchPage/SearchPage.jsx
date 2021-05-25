@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 
 import { connect } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -10,9 +10,23 @@ import { setSearchResult } from '../../redux/search/search.action';
 
 import Spinner from '../../components/Spinner/Spinner';
 import SearchOverview from '../../components/SearchOverview/SearchOverview';
+import Notification from '../../components/Notification/Notification';
 
 function SearchPage({ query, searchResult, setSearchResult }) {
 	const q = useParams();
+	let t = Date.now();
+	t.setSeconds(t.getSeconds() + 10);
+	const [
+		Stuck,
+		setStuck
+	] = useState(false);
+	const [
+		notificationMessage,
+		setNotificationMessage
+	] = useState(null);
+	const timer = setTimeout(() => {
+		if (time == Date.now()) setStuck(true);
+	}, 1000);
 	useEffect(
 		() => {
 			axios({
@@ -24,55 +38,70 @@ function SearchPage({ query, searchResult, setSearchResult }) {
 			})
 				.then((response) => {
 					setSearchResult({ ...response.data });
+					clearTimeout(timer);
 				})
 				.catch((error) => {
-					console.log('Oops ', error);
+					setNotificationMessage(e.response.data.message);
+					setInterval(() => {
+						setNotificationMessage(null);
+					}, 5000);
+					clearTimeout(timer);
 				});
 		},
 		[
 			query
 		]
 	);
-
+	if (stuck) {
+		setNotificationMessage('An error occurred :(');
+		setInterval(() => {
+			setNotificationMessage(null);
+		}, 5000);
+		clearTimeout(timer);
+	}
 	if (!!!searchResult) return <Spinner />;
 	return (
-		!!searchResult && (
-			<div>
-				<SearchOverview
-					category="Shows"
-					results={searchResult.shows.slice(0, 5)}
-				/>
-				<SearchOverview
-					category="Books"
-					results={searchResult.books.items.slice(0, 5)}
-				/>
-				{searchResult.movies.Response === 'True' ? (
+		<React.Fragment>
+			{!!searchResult && (
+				<div>
 					<SearchOverview
-						category="Movies"
-						results={searchResult.movies.Search.slice(0, 5)}
+						category="Shows"
+						results={searchResult.shows.slice(0, 5)}
 					/>
-				) : (
-					<div>
-						<Typography
-							gutterBottom
-							variant="h4"
-							component="h2"
-							style={{ color: '#fff', marginLeft: '5rem' }}
-						>
-							Movies:
-						</Typography>
-						<Typography
-							gutterBottom
-							variant="h4"
-							component="h2"
-							style={{ color: '#fff', marginLeft: '5rem' }}
-						>
-							No results found
-						</Typography>
-					</div>
-				)}
-			</div>
-		)
+					<SearchOverview
+						category="Books"
+						results={searchResult.books.items.slice(0, 5)}
+					/>
+					{!!searchResult.movies &&
+					searchResult.movies.Response === 'True' ? (
+						<SearchOverview
+							category="Movies"
+							results={searchResult.movies.Search.slice(0, 5)}
+						/>
+					) : (
+						<div>
+							<Typography
+								gutterBottom
+								variant="h4"
+								component="h2"
+								style={{ color: '#fff', marginLeft: '5rem' }}
+							>
+								Movies:
+							</Typography>
+							<Typography
+								gutterBottom
+								variant="h4"
+								component="h2"
+								style={{ color: '#fff', marginLeft: '5rem' }}
+							>
+								No results found
+							</Typography>
+						</div>
+					)}
+				</div>
+			)}
+			<Notification message={notificationMessage} />
+		</React.Fragment>
 	);
 }
 

@@ -67,38 +67,47 @@ app.post('/search', (req, res) => {
 	};
 
 	const getData = async () => {
-		let bookResponse = await fetch(
-			`https://www.googleapis.com/books/v1/volumes?q=${q}&key=${process
-				.env.GBOOKS_API_KEY}`
-		);
-		if (!bookResponse.ok) {
-			const message = `An error has occured: ${bookResponse.status}`;
-			throw new Error(message);
-		}
-		let bookJson = await bookResponse.json();
-		result.books = bookJson;
+		console.log({
+			GBOOKS : process.env.GBOOKS_API_KEY,
+			OMDB   : process.env.OMDB_API_KEY
+		});
+		try {
+			let bookResponse = await fetch(
+				`https://www.googleapis.com/books/v1/volumes?q=${q}&key=${process
+					.env.GBOOKS_API_KEY}`
+			);
+			if (!bookResponse.ok) {
+				const message = `An error has occured: ${bookResponse.status}`;
+				throw new Error(message);
+			}
+			let bookJson = await bookResponse.json();
+			result.books = bookJson;
 
-		let showsResponse = await fetch(
-			`https://api.tvmaze.com/search/shows?q=${q}`
-		);
-		if (!showsResponse.ok) {
-			const message = `An error has occured: ${showsResponse.status}`;
-			throw new Error(message);
-		}
-		let showsJson = await showsResponse.json();
-		result.shows = showsJson;
+			let showsResponse = await fetch(
+				`https://api.tvmaze.com/search/shows?q=${q}`
+			);
+			if (!showsResponse.ok) {
+				const message = `An error has occured: ${showsResponse.status}`;
+				throw new Error(message);
+			}
+			let showsJson = await showsResponse.json();
+			result.shows = showsJson;
 
-		let moviesResponse = await fetch(
-			`https://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&s=${q}`
-		);
-		if (!moviesResponse.ok) {
-			const message = `An error has occured: ${moviesResponse.status}`;
-			throw new Error(message);
+			let moviesResponse = await fetch(
+				`https://www.omdbapi.com/?apikey=${process.env
+					.OMDB_API_KEY}&s=${q}`
+			);
+			if (!moviesResponse.ok) {
+				const message = `An error has occured: ${moviesResponse.status}`;
+				throw new Error(message);
+			}
+			let moviesJson = await moviesResponse.json();
+			result.movies = moviesJson;
+			console.log(result.movies);
+			res.send(result);
+		} catch (e) {
+			res.status(400).send({ message: 'An error occurred :(' });
 		}
-		let moviesJson = await moviesResponse.json();
-		result.movies = moviesJson;
-		console.log(result.movies);
-		res.send(result);
 	};
 
 	getData();
