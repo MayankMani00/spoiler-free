@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 81" width="57" height="81">
+	<title>New Project</title>
+	<defs>
+		<image  width="45" height="81" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAABRAgMAAAA7lMezAAAAAXNSR0IB2cksfwAAAAlQTFRFAAAA////////c3ilYwAAAAN0Uk5TAP8AaVI5rAAAAR5JREFUeJx10715xCAMBmBUsEG0j1Okp0AUbBCm8BLJBi7ClNEPgvM9xpVfH9YnkC8Ev2I9533AsgPtAFvEJwBRYlgoCnCADO20VXTwE0Uc6Ke9QvKzI0+QVS4DR3DAQF1AQxxoChSQASMXk0zBhwAGchyZf7w6AUNiGHCDNKyZskwqaeY1tq2ZjkMyf09ebegCXfMpKIpIX5LJR0UGjmkDxLgWav/hRrkXVJSFdtWFb92pnrlc3aD37QW1CzDBO3JRxCzvJ4M8R0qo4MKJD3jAhoJtIUQH3MHn69DDrhNpAd8RHDrUDcIE3JEXJHOW1u/gEZrpjeq3c0N8hlTpL8Atyg5Qu7dz8N/3Fa37fnh4fSLDhEy7ToDO2keitRj/Eg/9kOiDOMcAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Layer 1" href="#img1" x="1" y="0" />
+</svg>

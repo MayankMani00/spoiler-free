@@ -30,6 +30,8 @@ import IconButton from '@material-ui/core/IconButton';
 import Sidebar from '../Sidebar/Sidebar';
 import Notification from '../Notification/Notification';
 
+import Logo from './spoiler-free-logo.svg';
+
 import './Navbar.css';
 
 function isValid(str) {
@@ -229,7 +231,11 @@ const Navbar = ({
 						style={{ textDecoration: 'none', color: 'white' }}
 						href="/"
 					>
-						Logo
+						<img
+							src={Logo}
+							alt="Logo"
+							style={{ maxHeight: '40px', maxWidth: '40px' }}
+						/>
 					</a>
 					<SearchBox />
 					{loggedIn ? (
