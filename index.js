@@ -12,7 +12,7 @@ mongoose
 		useUnifiedTopology : true
 	})
 	.then(() => console.log('Database Connected Successfully'))
-	.catch((err) => console.log(err.message));
+	.catch((err) => console.log('Databse error: ' + err.message));
 
 module.exports.User = require('./user');
 module.exports.Room = require('./room');
