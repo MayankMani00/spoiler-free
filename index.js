@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 mongoose.set('debug', true);
 mongoose.Promise = Promise;
-
+// console.log(process.env.MONGO_URL);
 mongoose
-	.connect(`${process.env.MONGO_URL}`, {
+	.connect(`${process.env.DB_URI}`, {
 		keepAlive          : true,
 		useNewUrlParser    : true,
 		useCreateIndex     : true,
