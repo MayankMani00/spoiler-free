@@ -2,10 +2,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 mongoose.set('debug', true);
 mongoose.Promise = Promise;
-console.log({
-	MONGO_URI: process.env.MONGO_URI,
-	'DB_URI:': process.env.DB_URI
-});
+
 mongoose
 	.connect(`${process.env.MONGO_URI}`, {
 		keepAlive          : true,

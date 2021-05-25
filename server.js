@@ -20,7 +20,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // app.use(enforce.HTTPS({ trustProtoHeader: true }));
-app.use(compression());
+// app.use(compression());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -39,8 +39,6 @@ app.use((req, res, next) => {
 	);
 	next();
 });
-// if (process.env.NODE_ENV === 'production') {
-// 	app.use(express.static(path.join(__dirname, 'client/build')));
 
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'));
