@@ -5,7 +5,7 @@ const path = require('path');
 const fetch = require('node-fetch');
 const { response } = require('express');
 const cookieParser = require('cookie-parser');
-const db = require('./models');
+const db = require('./index');
 var jwt = require('jsonwebtoken');
 
 const auth = require('./auth');
