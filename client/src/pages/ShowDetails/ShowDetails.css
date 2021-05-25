@@ -1,0 +1,39 @@
+/* .movie-img-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 240px;
+	width: 180px;
+} */
+
+.show-img {
+	margin: auto;
+	height: 340px;
+	width: 210px;
+}
+
+/* .title-container {
+	display: flex;
+	align-items: center;
+	width: 400px;
+	height: 80px;
+} */
+
+.show-episodes {
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+	margin: 2rem 0;
+}
+
+.movie-year {
+}
+
+.movie-rating {
+}
+
+.movie-plot {
+}
+
+.active-rooms {
+}

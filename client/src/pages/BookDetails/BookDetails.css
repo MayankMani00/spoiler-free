@@ -1,0 +1,35 @@
+/* .book-img-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 240px;
+	width: 180px;
+} */
+
+.book-img {
+	margin: auto;
+	height: 340px;
+	width: 210px;
+}
+
+/* .title-container {
+	display: flex;
+	align-items: center;
+	width: 400px;
+	height: 80px;
+} */
+
+.authors-container {
+}
+
+.book-release-year {
+}
+
+.book-rating {
+}
+
+.book-description {
+}
+
+.active-rooms {
+}

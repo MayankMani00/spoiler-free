@@ -1,0 +1,50 @@
+.roomchat-container {
+	display: flex;
+	margin: 0 1rem;
+	padding-bottom: 5px;
+	height: 100%;
+	color: white !important;
+	/* overflow-y: scroll; */
+}
+
+.messages-scroller {
+	width: 100%;
+	overflow-y: scroll;
+	height: 80%;
+}
+
+.messages-container {
+	width: 100%;
+	visibility: visible;
+}
+
+.message:nth-child(odd) {
+	background: #454545;
+}
+
+.message > p {
+	display: inline;
+}
+
+.input-area {
+	position: fixed;
+	bottom: 5px;
+	width: 35vw;
+	align-items: center;
+	background: #212121;
+}
+
+@media (max-width: 600px) {
+	.input-area {
+		width: 100%;
+	}
+}
+
+.name {
+	width: fit-content;
+}
+
+.message {
+	width: 100%;
+	padding: 0.5rem;
+}

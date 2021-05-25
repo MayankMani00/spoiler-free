@@ -1,0 +1,55 @@
+.chat-popup {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: 60vh;
+	width: 35vw;
+	background: #212121;
+	color: white;
+	z-index: 5;
+}
+
+.chat-navbar {
+	display: flex;
+	justify-content: space-between;
+}
+
+.room-list {
+	list-style-type: none;
+	padding-inline-start: 0;
+	margin-top: 0;
+	overflow-y: scroll;
+	height: 90%;
+}
+
+.room-in-list {
+	display: flex;
+	align-items: center;
+	height: 3rem;
+	padding: 1rem;
+	margin: 0 1rem;
+	/* border-bottom: solid 1px white; */
+}
+
+.room-in-list:hover {
+	background: rgba(220, 220, 220, 0.2);
+}
+
+.room-in-list:active {
+	transform: scale(1.025);
+	transition-duration: 0.1s;
+	transition-timing-function: ease-in;
+}
+
+@media (max-width: 960px) {
+	.chat-popup {
+		width: 45vw;
+	}
+}
+
+@media (max-width: 600px) {
+	.chat-popup {
+		height: 90%;
+		width: 100%;
+	}
+}

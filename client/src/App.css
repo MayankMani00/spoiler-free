@@ -1,0 +1,26 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #121212;
+}
+
+.MuiPaper-root {
+	background: #343434 !important;
+	color: white !important;
+}
+
+.MuiPaper-root > button,
+.MuiInputBase-root {
+	color: white !important;
+}
+
+.MuiFormControl-root > label {
+	color: rgba(180, 180, 180, 1) !important;
+}
+
+button {
+	color: rgba(0, 120, 210, 255) !important;
+	border-color: rgba(0, 120, 210, 255) !important;
+}
