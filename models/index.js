@@ -14,5 +14,5 @@ mongoose
 	.then(() => console.log('Database Connected Successfully'))
 	.catch((err) => console.log(err.message));
 
-module.exports.User = require('./User');
+module.exports.User = require('./user');
 module.exports.Room = require('./room');
