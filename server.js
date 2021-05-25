@@ -66,11 +66,11 @@ app.post('/search', (req, res) => {
 		movies : ''
 	};
 
+	console.log({
+		GBOOKS : process.env.GBOOKS_API_KEY,
+		OMDB   : process.env.OMDB_API_KEY
+	});
 	const getData = async () => {
-		console.log({
-			GBOOKS : process.env.GBOOKS_API_KEY,
-			OMDB   : process.env.OMDB_API_KEY
-		});
 		try {
 			let bookResponse = await fetch(
 				`https://www.googleapis.com/books/v1/volumes?q=${q}&key=${process
