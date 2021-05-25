@@ -1,4 +1,4 @@
-const db = require('./models');
+const db = require('./index');
 var jwt = require('jsonwebtoken');
 
 function isValid(str) {
