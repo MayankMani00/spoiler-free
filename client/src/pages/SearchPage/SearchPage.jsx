@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { connect } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -17,15 +17,15 @@ function SearchPage({ query, searchResult, setSearchResult }) {
 	let t = Date.now();
 	t.setSeconds(t.getSeconds() + 10);
 	const [
-		Stuck,
+		stuck,
 		setStuck
 	] = useState(false);
 	const [
 		notificationMessage,
 		setNotificationMessage
 	] = useState(null);
-	const timer = setIntreval(() => {
-		if (time == Date.now()) setStuck(true);
+	const timer = setInterval(() => {
+		if (t == Date.now()) setStuck(true);
 	}, 1000);
 	useEffect(
 		() => {
@@ -41,7 +41,7 @@ function SearchPage({ query, searchResult, setSearchResult }) {
 					clearInterval(timer);
 				})
 				.catch((error) => {
-					setNotificationMessage(e.response.data.message);
+					setNotificationMessage(error.response.data.message);
 					setInterval(() => {
 						setNotificationMessage(null);
 					}, 5000);
