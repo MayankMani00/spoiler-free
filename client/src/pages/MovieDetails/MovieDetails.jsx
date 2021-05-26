@@ -18,7 +18,7 @@ const MovieDetails = () => {
 	const { imdbID } = useParams();
 	useEffect(() => {
 		axios({
-			url    : 'http://localhost:5000/getMovie',
+			url    : '/getMovie',
 			method : 'post',
 			data   : {
 				id : imdbID

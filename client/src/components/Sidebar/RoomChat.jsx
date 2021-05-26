@@ -169,10 +169,11 @@ const RoomChat = ({ username, room, socket }) => {
 };
 
 const RoomContainer = (props) => {
+	console.log(window.location.hostname, window.location.host);
 	const [
 		socket,
 		setSocket
-	] = useState(opensocket('http://localhost:4000'));
+	] = useState(opensocket(`${window.location.hostname}:4000`));
 	useEffect(() => {
 		return () => {
 			socket.disconnect();

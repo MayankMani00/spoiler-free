@@ -22,7 +22,7 @@ function SearchPage({ query, searchResult, setSearchResult }) {
 	useEffect(
 		() => {
 			axios({
-				url                 : 'http://localhost:5000/search',
+				url                 : '/search',
 				method              : 'post',
 				data                : {
 					query : q.query

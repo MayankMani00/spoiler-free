@@ -42,9 +42,11 @@ app.use((req, res, next) => {
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'));
 }
-app.get('*', (request, response) => {
-	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
+
+// app.get('*', (request, response) => {
+// 	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+// });
+
 app.get('/robots.txt', (req, res) => {
 	res.sendFile(path.join(__dirname, 'client/build', 'robots.txt'));
 });
@@ -115,12 +117,19 @@ app.post('/search', (req, res) => {
 });
 
 app.post('/getMovie', (req, res) => {
-	const id = req.body.id;
-	fetch(`https://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&i=${id}`)
-		.then((res) => res.json())
-		.then((data) => {
-			res.send(data);
-		});
+	try {
+		const id = req.body.id;
+		fetch(
+			`https://www.omdbapi.com/?apikey=${process.env
+				.OMDB_API_KEY}&i=${id}`
+		)
+			.then((res) => res.json())
+			.then((data) => {
+				res.send(data);
+			});
+	} catch (e) {
+		res.status(400).send({ message: 'An error occurred' });
+	}
 });
 
 const getChatHistory = async (req, res, next) => {
@@ -158,26 +167,9 @@ const getChatHistory = async (req, res, next) => {
 
 app.post('/getChatHistory', getChatHistory);
 
-const http = require('http');
-const server = http.createServer(app);
-const { Server } = require('socket.io');
-// const socketio = require('socket.io');
-
-// const httpServer = createServer();
-const io = new Server(server, {
-	cors    : 'https://localhost:3000',
-	methods : [
-		'GET',
-		'POST'
-	]
-});
-
-server.listen(4000, () => {
-	console.log('running on port 4000');
-});
-
 const initialize = async (req, res) => {
 	try {
+		// console.log('called');
 		var token = req.cookies.spoiler_free_access_token;
 		// console.log(req.cookies, token);
 		var verified = jwt.verify(token, process.env.SECRET_KEY);
@@ -265,6 +257,27 @@ app.get('/logout', (req, res) => {
 		overwrite : true
 	});
 	res.status(200);
+});
+
+const http = require('http');
+const server = http.createServer(app);
+const { Server } = require('socket.io');
+// const socketio = require('socket.io');
+
+// const httpServer = createServer();
+const io = new Server(server, {
+	cors    : [
+		'https://localhost:3000',
+		'https://fathomless-wave-52070.herokuapp.com/'
+	],
+	methods : [
+		'GET',
+		'POST'
+	]
+});
+
+server.listen(4000, () => {
+	console.log('running on port 5000');
 });
 
 io.on('connection', (socket) => {
