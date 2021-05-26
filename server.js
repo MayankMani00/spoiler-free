@@ -303,8 +303,8 @@ app.get('/getPort', (req, res) => {
 	res.send({ port: port + 1 });
 });
 
-server.listen(5000, () => {
-	console.log(`running on port 5000`);
+server.listen(port, () => {
+	console.log(`running on port ${port}`);
 });
 
 io.on('connection', (socket) => {
