@@ -308,7 +308,7 @@ server.listen(port, () => {
 });
 
 io.on('connection', (socket) => {
-	console.log('a user connected');
+	// console.log('a user connected');
 	var username, room, roomReq;
 
 	socket.on('join', (options) => {
@@ -356,7 +356,7 @@ io.on('connection', (socket) => {
 					{ $push: { messages: message } },
 					function(err, success) {
 						if (err) console.log(err);
-						else console.log(success);
+						// else console.log(success);
 					}
 				);
 			} catch (e) {
