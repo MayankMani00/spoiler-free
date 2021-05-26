@@ -1037,699 +1037,201 @@ export const movies = [
 ];
 export const books = [
 	{
-		kind       : 'books#volume',
-		id         : 'F1wgqlNi8AMC',
-		etag       : 'QG7e8jcqGyo',
-		selfLink   : 'https://www.googleapis.com/books/v1/volumes/F1wgqlNi8AMC',
-		volumeInfo : {
-			title               : 'Flowers for Algernon',
-			subtitle            : 'A Full-length Play',
-			authors             : [
-				'David Rogers',
-				'Daniel Keyes'
-			],
-			publisher           : 'Dramatic Publishing',
-			publishedDate       : '1969',
-			description         :
-				'The compelling story of Charlie Gordon, willing victim of a strange experiment - a moron, a genius, a man in search of himself. Poignant, funny, tragic, but with a hope for the indomitable spirit of man, this unusual play tells a story you will long remember. It also offers a magnificent role.',
-			industryIdentifiers : [
-				{
-					type       : 'ISBN_10',
-					identifier : '0871295377'
-				},
-				{
-					type       : 'ISBN_13',
-					identifier : '9780871295378'
-				}
-			],
-			readingModes        : {
-				text  : false,
-				image : true
-			},
-			pageCount           : 117,
-			printType           : 'BOOK',
-			categories          : [
-				'Accelerated readers'
-			],
-			averageRating       : 5,
-			ratingsCount        : 1,
-			maturityRating      : 'NOT_MATURE',
-			allowAnonLogging    : false,
-			contentVersion      : '0.1.2.0.preview.1',
-			panelizationSummary : {
-				containsEpubBubbles  : false,
-				containsImageBubbles : false
-			},
-			imageLinks          : {
-				smallThumbnail :
-					'http://books.google.com/books/content?id=F1wgqlNi8AMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api',
-				thumbnail      :
-					'http://books.google.com/books/content?id=F1wgqlNi8AMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
-			},
-			language            : 'en',
-			previewLink         :
-				'http://books.google.co.in/books?id=F1wgqlNi8AMC&pg=PA3&dq=flowers+inauthor:keyes&hl=&cd=1&source=gbs_api',
-			infoLink            :
-				'http://books.google.co.in/books?id=F1wgqlNi8AMC&dq=flowers+inauthor:keyes&hl=&source=gbs_api',
-			canonicalVolumeLink :
-				'https://books.google.com/books/about/Flowers_for_Algernon.html?hl=&id=F1wgqlNi8AMC'
-		},
-		saleInfo   : {
-			country     : 'IN',
-			saleability : 'NOT_FOR_SALE',
-			isEbook     : false
-		},
 		accessInfo : {
+			accessViewStatus       : 'NONE',
 			country                : 'IN',
-			viewability            : 'PARTIAL',
-			embeddable             : true,
-			publicDomain           : false,
-			textToSpeechPermission : 'ALLOWED',
+			embeddable             : false,
 			epub                   : {
 				isAvailable : false
 			},
 			pdf                    : {
 				isAvailable : false
 			},
+			publicDomain           : false,
+			quoteSharingAllowed    : false,
+			textToSpeechPermission : 'ALLOWED',
+			viewability            : 'NO_PAGES',
 			webReaderLink          :
-				'http://play.google.com/books/reader?id=F1wgqlNi8AMC&hl=&printsec=frontcover&source=gbs_api',
-			accessViewStatus       : 'SAMPLE',
-			quoteSharingAllowed    : false
+				'http://play.google.com/books/reader?id=bu4pPwAACAAJ&hl=&printsec=frontcover&source=gbs_api'
+		},
+		etag       : 'ZscQ9pQr0xQ',
+		id         : 'bu4pPwAACAAJ',
+		kind       : 'books#volume',
+		saleInfo   : {
+			country     : 'IN',
+			isEbook     : false,
+			saleability : 'NOT_FOR_SALE'
 		},
 		searchInfo : {
 			textSnippet :
-				'(These are just suggestions; parts can be divided many ways, possibly making \u003cbr\u003e\nthe cast smaller. Some very small parts can be eliminated.) SETTING &quot;\u003cb\u003eFlowers\u003c/b\u003e for \u003cbr\u003e\nAlgernon&quot; is played in drapes, with certain \u003cb\u003eFLOWERS\u003c/b\u003e FOR ALGERNON.'
+				'Trying to make sense of the horrors of World War II, Death relates the story of Liesel, a young German girl whose book-stealing and story-telling talents help sustain her family and the Jewish man they are hiding, as well as their neighbors ...'
+		},
+		selfLink   : 'https://www.googleapis.com/books/v1/volumes/bu4pPwAACAAJ',
+		volumeInfo : {
+			allowAnonLogging    : false,
+			authors             : [
+				'Markus Zusak'
+			],
+			averageRating       : 4.5,
+			canonicalVolumeLink :
+				'https://books.google.com/books/about/The_Book_Thief.html?hl=&id=bu4pPwAACAAJ',
+			categories          : [
+				'Juvenile Fiction'
+			],
+			contentVersion      : 'preview-1.0.0',
+			description         :
+				'Trying to make sense of the horrors of World War II, Death relates the story of Liesel--a young German girl whose book-stealing and story-telling talents help sustain her family and the Jewish man they are hiding, as well as their neighbors.',
+			imageLinks          : {
+				smallThumbnail :
+					'http://books.google.com/books/content?id=bu4pPwAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api',
+				thumbnail      :
+					'http://books.google.com/books/content?id=bu4pPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api'
+			},
+			industryIdentifiers : [
+				{
+					identifier : '141779738X',
+					type       : 'ISBN_10'
+				},
+				{
+					identifier : '9781417797387',
+					type       : 'ISBN_13'
+				}
+			],
+			infoLink            :
+				'http://books.google.co.in/books?id=bu4pPwAACAAJ&dq=the+book+thief&hl=&source=gbs_api',
+			language            : 'un',
+			maturityRating      : 'NOT_MATURE',
+			pageCount           : 552,
+			previewLink         :
+				'http://books.google.co.in/books?id=bu4pPwAACAAJ&dq=the+book+thief&hl=&cd=1&source=gbs_api',
+			printType           : 'BOOK',
+			publishedDate       : '2007-09-01',
+			publisher           : 'Turtleback Books',
+			ratingsCount        : 2496,
+			readingModes        : {
+				image : false,
+				text  : false
+			},
+			title               : 'The Book Thief'
 		}
 	},
 	{
-		kind       : 'books#volume',
-		id         : '8Pr_kLFxciYC',
-		etag       : '7BJPM5xJgYo',
-		selfLink   : 'https://www.googleapis.com/books/v1/volumes/8Pr_kLFxciYC',
-		volumeInfo : {
-			title               : 'Flowers For Algernon',
-			subtitle            : 'A Modern Literary Classic',
-			authors             : [
-				'Daniel Keyes'
-			],
-			publisher           : 'Hachette UK',
-			publishedDate       : '2012-11-15',
-			description         :
-				"The classic novel about a daring experiment in human intelligence Charlie Gordon, IQ 68, is a floor sweeper and the gentle butt of everyone's jokes - until an experiment in the enhancement of human intelligence turns him into a genius. But then Algernon, the mouse whose triumphal experimental transformation preceded his, fades and dies, and Charlie has to face the possibility that his salvation was only temporary.",
-			industryIdentifiers : [
-				{
-					type       : 'ISBN_13',
-					identifier : '9780575088498'
-				},
-				{
-					type       : 'ISBN_10',
-					identifier : '0575088494'
-				}
-			],
-			readingModes        : {
-				text  : true,
-				image : false
-			},
-			pageCount           : 224,
-			printType           : 'BOOK',
-			categories          : [
-				'Fiction'
-			],
-			averageRating       : 5,
-			ratingsCount        : 5,
-			maturityRating      : 'NOT_MATURE',
-			allowAnonLogging    : true,
-			contentVersion      : '0.13.16.0.preview.2',
-			panelizationSummary : {
-				containsEpubBubbles  : false,
-				containsImageBubbles : false
-			},
-			imageLinks          : {
-				smallThumbnail :
-					'http://books.google.com/books/content?id=8Pr_kLFxciYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api',
-				thumbnail      :
-					'http://books.google.com/books/content?id=8Pr_kLFxciYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
-			},
-			language            : 'en',
-			previewLink         :
-				'http://books.google.co.in/books?id=8Pr_kLFxciYC&pg=PT269&dq=flowers+inauthor:keyes&hl=&cd=2&source=gbs_api',
-			infoLink            :
-				'https://play.google.com/store/books/details?id=8Pr_kLFxciYC&source=gbs_api',
-			canonicalVolumeLink :
-				'https://play.google.com/store/books/details?id=8Pr_kLFxciYC'
-		},
-		saleInfo   : {
-			country     : 'IN',
-			saleability : 'FOR_SALE',
-			isEbook     : true,
-			listPrice   : {
-				amount       : 401.2,
-				currencyCode : 'INR'
-			},
-			retailPrice : {
-				amount       : 216.65,
-				currencyCode : 'INR'
-			},
-			buyLink     :
-				'https://play.google.com/store/books/details?id=8Pr_kLFxciYC&rdid=book-8Pr_kLFxciYC&rdot=1&source=gbs_api',
-			offers      : [
-				{
-					finskyOfferType : 1,
-					listPrice       : {
-						amountInMicros : 401200000,
-						currencyCode   : 'INR'
-					},
-					retailPrice     : {
-						amountInMicros : 216650000,
-						currencyCode   : 'INR'
-					}
-				}
-			]
-		},
 		accessInfo : {
+			accessViewStatus       : 'SAMPLE',
 			country                : 'IN',
-			viewability            : 'PARTIAL',
 			embeddable             : true,
-			publicDomain           : false,
-			textToSpeechPermission : 'ALLOWED_FOR_ACCESSIBILITY',
 			epub                   : {
-				isAvailable  : true,
 				acsTokenLink :
-					'http://books.google.co.in/books/download/Flowers_For_Algernon-sample-epub.acsm?id=8Pr_kLFxciYC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api'
+					'http://books.google.co.in/books/download/To_Kill_a_Mockingbird-sample-epub.acsm?id=PGR2AwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api',
+				isAvailable  : true
 			},
 			pdf                    : {
 				isAvailable : false
 			},
-			webReaderLink          :
-				'http://play.google.com/books/reader?id=8Pr_kLFxciYC&hl=&printsec=frontcover&source=gbs_api',
-			accessViewStatus       : 'SAMPLE',
-			quoteSharingAllowed    : false
-		},
-		searchInfo : {
-			textSnippet :
-				'Charlie is drawing me down into myself. I stare inward in the center of my \u003cbr\u003e\nunseeing eye at the red spot that transforms itself into a multipetaled \u003cb\u003eflower\u003c/b\u003e – the \u003cbr\u003e\nshimmering, swirling, luminescent \u003cb\u003eflower\u003c/b\u003e that lies deep in the core of my \u003cbr\u003e\nunconscious.'
-		}
-	},
-	{
-		kind       : 'books#volume',
-		id         : 'wAUiAAAAMAAJ',
-		etag       : 'Q4pXXzYRc9k',
-		selfLink   : 'https://www.googleapis.com/books/v1/volumes/wAUiAAAAMAAJ',
-		volumeInfo : {
-			title               : 'Evan Dale',
-			authors             : [
-				'F. Keyes'
-			],
-			publishedDate       : '1864',
-			industryIdentifiers : [
-				{
-					type       : 'OTHER',
-					identifier : 'NYPL:33433074876743'
-				}
-			],
-			readingModes        : {
-				text  : false,
-				image : true
-			},
-			pageCount           : 387,
-			printType           : 'BOOK',
-			maturityRating      : 'NOT_MATURE',
-			allowAnonLogging    : false,
-			contentVersion      : '0.1.2.0.full.1',
-			panelizationSummary : {
-				containsEpubBubbles  : false,
-				containsImageBubbles : false
-			},
-			imageLinks          : {
-				smallThumbnail :
-					'http://books.google.com/books/content?id=wAUiAAAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api',
-				thumbnail      :
-					'http://books.google.com/books/content?id=wAUiAAAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
-			},
-			language            : 'en',
-			previewLink         :
-				'http://books.google.co.in/books?id=wAUiAAAAMAAJ&pg=PA137&dq=flowers+inauthor:keyes&hl=&cd=3&source=gbs_api',
-			infoLink            :
-				'https://play.google.com/store/books/details?id=wAUiAAAAMAAJ&source=gbs_api',
-			canonicalVolumeLink :
-				'https://play.google.com/store/books/details?id=wAUiAAAAMAAJ'
-		},
-		saleInfo   : {
-			country     : 'IN',
-			saleability : 'FREE',
-			isEbook     : true,
-			buyLink     :
-				'https://play.google.com/store/books/details?id=wAUiAAAAMAAJ&rdid=book-wAUiAAAAMAAJ&rdot=1&source=gbs_api'
-		},
-		accessInfo : {
-			country                : 'IN',
-			viewability            : 'ALL_PAGES',
-			embeddable             : true,
-			publicDomain           : true,
-			textToSpeechPermission : 'ALLOWED',
-			epub                   : {
-				isAvailable  : false,
-				downloadLink :
-					'http://books.google.co.in/books/download/Evan_Dale.epub?id=wAUiAAAAMAAJ&hl=&output=epub&source=gbs_api'
-			},
-			pdf                    : {
-				isAvailable  : true,
-				downloadLink :
-					'http://books.google.co.in/books/download/Evan_Dale.pdf?id=wAUiAAAAMAAJ&hl=&output=pdf&sig=ACfU3U2Xg5OeqGIO0AvQ0NH19Kz80v0uRw&source=gbs_api'
-			},
-			webReaderLink          :
-				'http://play.google.com/books/reader?id=wAUiAAAAMAAJ&hl=&printsec=frontcover&source=gbs_api',
-			accessViewStatus       : 'FULL_PUBLIC_DOMAIN',
-			quoteSharingAllowed    : false
-		},
-		searchInfo : {
-			textSnippet :
-				'crushed on the unfeeling \u003cb\u003eflowers\u003c/b\u003e of the carpet, take it up tenderly, and curse the \u003cbr\u003e\nfoot that spoiled it. For the rest of the evening Carleton was on an extensive \u003cbr\u003e\nsearch of discovery for the missing \u003cb\u003eflower\u003c/b\u003e. In truth, he was in great danger of \u003cbr\u003e\nbecoming&nbsp;...'
-		}
-	},
-	{
-		kind       : 'books#volume',
-		id         : 'LRlCAAAAYAAJ',
-		etag       : 'nnjC0ZgwYNY',
-		selfLink   : 'https://www.googleapis.com/books/v1/volumes/LRlCAAAAYAAJ',
-		volumeInfo : {
-			title               :
-				'Some Environmental Factors Influencing Bud Formation, Abscission and Flower Production of Gardenias',
-			authors             : [
-				'Curtis Gilbert Keyes'
-			],
-			publishedDate       : '1946',
-			industryIdentifiers : [
-				{
-					type       : 'OTHER',
-					identifier : 'CORNELL:31924002987646'
-				}
-			],
-			readingModes        : {
-				text  : false,
-				image : false
-			},
-			pageCount           : 190,
-			printType           : 'BOOK',
-			categories          : [
-				'Gardenia'
-			],
-			maturityRating      : 'NOT_MATURE',
-			allowAnonLogging    : false,
-			contentVersion      : '0.1.1.0.preview.0',
-			panelizationSummary : {
-				containsEpubBubbles  : false,
-				containsImageBubbles : false
-			},
-			imageLinks          : {
-				smallThumbnail :
-					'http://books.google.com/books/content?id=LRlCAAAAYAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api',
-				thumbnail      :
-					'http://books.google.com/books/content?id=LRlCAAAAYAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api'
-			},
-			language            : 'en',
-			previewLink         :
-				'http://books.google.co.in/books?id=LRlCAAAAYAAJ&q=flowers+inauthor:keyes&dq=flowers+inauthor:keyes&hl=&cd=4&source=gbs_api',
-			infoLink            :
-				'http://books.google.co.in/books?id=LRlCAAAAYAAJ&dq=flowers+inauthor:keyes&hl=&source=gbs_api',
-			canonicalVolumeLink :
-				'https://books.google.com/books/about/Some_Environmental_Factors_Influencing_B.html?hl=&id=LRlCAAAAYAAJ'
-		},
-		saleInfo   : {
-			country     : 'IN',
-			saleability : 'NOT_FOR_SALE',
-			isEbook     : false
-		},
-		accessInfo : {
-			country                : 'IN',
-			viewability            : 'NO_PAGES',
-			embeddable             : false,
 			publicDomain           : false,
-			textToSpeechPermission : 'ALLOWED',
-			epub                   : {
-				isAvailable : false
-			},
-			pdf                    : {
-				isAvailable : false
-			},
+			quoteSharingAllowed    : false,
+			textToSpeechPermission : 'ALLOWED_FOR_ACCESSIBILITY',
+			viewability            : 'PARTIAL',
 			webReaderLink          :
-				'http://play.google.com/books/reader?id=LRlCAAAAYAAJ&hl=&printsec=frontcover&source=gbs_api',
-			accessViewStatus       : 'NONE',
-			quoteSharingAllowed    : false
+				'http://play.google.com/books/reader?id=PGR2AwAAQBAJ&hl=&printsec=frontcover&source=gbs_api'
 		},
-		searchInfo : {
-			textSnippet :
-				'Quo relation concernino \u003cb\u003eflower\u003c/b\u003e production was consistantly observed, and too \u003cbr\u003e\nwas one correlation botvos., abscission aiki flows: production. ...eliever \u003cb\u003eflower\u003c/b\u003e \u003cbr\u003e\nproduction was increasod too amount of bid abscission that took placs was fixed \u003cbr\u003e\nas&nbsp;...'
-		}
-	},
-	{
+		etag       : 'Al6XkaVZ1zU',
+		id         : 'PGR2AwAAQBAJ',
 		kind       : 'books#volume',
-		id         : 'wYB5PwAACAAJ',
-		etag       : 'ixkoZG/ey6s',
-		selfLink   : 'https://www.googleapis.com/books/v1/volumes/wYB5PwAACAAJ',
-		volumeInfo : {
-			title               : 'Bloemen Voor Algernon',
-			authors             : [
-				'Daniel Keyes'
-			],
-			publisher           : 'Bantam Books',
-			publishedDate       : '1984-05-01',
-			description         :
-				'With more than five million copies sold, "Flowers for Algernon" is the beloved, classic story of a mentally disabled man whose experimental quest for intelligence mirrors that of Algernon, an extraordinary lab mouse. High school and older.',
-			industryIdentifiers : [
-				{
-					type       : 'ISBN_10',
-					identifier : '0553169041'
-				},
-				{
-					type       : 'ISBN_13',
-					identifier : '9780553169041'
-				}
-			],
-			readingModes        : {
-				text  : false,
-				image : false
-			},
-			pageCount           : 72,
-			printType           : 'BOOK',
-			averageRating       : 4,
-			ratingsCount        : 159,
-			maturityRating      : 'NOT_MATURE',
-			allowAnonLogging    : false,
-			contentVersion      : 'preview-1.0.0',
-			language            : 'en',
-			previewLink         :
-				'http://books.google.co.in/books?id=wYB5PwAACAAJ&dq=flowers+inauthor:keyes&hl=&cd=5&source=gbs_api',
-			infoLink            :
-				'http://books.google.co.in/books?id=wYB5PwAACAAJ&dq=flowers+inauthor:keyes&hl=&source=gbs_api',
-			canonicalVolumeLink :
-				'https://books.google.com/books/about/Bloemen_Voor_Algernon.html?hl=&id=wYB5PwAACAAJ'
-		},
 		saleInfo   : {
 			country     : 'IN',
-			saleability : 'NOT_FOR_SALE',
-			isEbook     : false
-		},
-		accessInfo : {
-			country                : 'IN',
-			viewability            : 'NO_PAGES',
-			embeddable             : false,
-			publicDomain           : false,
-			textToSpeechPermission : 'ALLOWED',
-			epub                   : {
-				isAvailable : false
-			},
-			pdf                    : {
-				isAvailable : false
-			},
-			webReaderLink          :
-				'http://play.google.com/books/reader?id=wYB5PwAACAAJ&hl=&printsec=frontcover&source=gbs_api',
-			accessViewStatus       : 'NONE',
-			quoteSharingAllowed    : false
+			isEbook     : false,
+			saleability : 'NOT_FOR_SALE'
 		},
 		searchInfo : {
 			textSnippet :
-				'With more than five million copies sold, &quot;Flowers for Algernon&quot; is the beloved, classic story of a mentally disabled man whose experimental quest for intelligence mirrors that of Algernon, an extraordinary lab mouse. High school and older.'
-		}
-	},
-	{
-		kind       : 'books#volume',
-		id         : 'uCqioAEACAAJ',
-		etag       : 'g7UdY1PAwW4',
-		selfLink   : 'https://www.googleapis.com/books/v1/volumes/uCqioAEACAAJ',
+				'Voted America&#39;s Best-Loved Novel in PBS&#39;s The Great American Read Harper Lee&#39;s Pulitzer Prize-winning masterwork of honor and injustice in the deep South—and the heroism of one man in the face of blind and violent hatred One of the most ...'
+		},
+		selfLink   : 'https://www.googleapis.com/books/v1/volumes/PGR2AwAAQBAJ',
 		volumeInfo : {
-			title               :
-				'Flowers for Algernon - Downloadable Multiple Critical Perspectives',
+			allowAnonLogging    : true,
 			authors             : [
-				'Daniel Keyes'
+				'Harper Lee'
 			],
-			publishedDate       : '2011-01-01',
-			description         :
-				'Probe the depth and richness of your favorite titles and usher your students into an understanding of what really made us want to teach literature in the first place. Each guide offers clear and concise explanations of three different critical perspectives.',
-			industryIdentifiers : [
-				{
-					type       : 'ISBN_10',
-					identifier : '1935467972'
-				},
-				{
-					type       : 'ISBN_13',
-					identifier : '9781935467977'
-				}
-			],
-			readingModes        : {
-				text  : false,
-				image : false
-			},
-			printType           : 'BOOK',
-			maturityRating      : 'NOT_MATURE',
-			allowAnonLogging    : false,
-			contentVersion      : 'preview-1.0.0',
-			language            : 'en',
-			previewLink         :
-				'http://books.google.co.in/books?id=uCqioAEACAAJ&dq=flowers+inauthor:keyes&hl=&cd=6&source=gbs_api',
-			infoLink            :
-				'http://books.google.co.in/books?id=uCqioAEACAAJ&dq=flowers+inauthor:keyes&hl=&source=gbs_api',
+			averageRating       : 4.5,
 			canonicalVolumeLink :
-				'https://books.google.com/books/about/Flowers_for_Algernon_Downloadable_Multip.html?hl=&id=uCqioAEACAAJ'
-		},
-		saleInfo   : {
-			country     : 'IN',
-			saleability : 'NOT_FOR_SALE',
-			isEbook     : false
-		},
-		accessInfo : {
-			country                : 'IN',
-			viewability            : 'NO_PAGES',
-			embeddable             : false,
-			publicDomain           : false,
-			textToSpeechPermission : 'ALLOWED',
-			epub                   : {
-				isAvailable : false
-			},
-			pdf                    : {
-				isAvailable : false
-			},
-			webReaderLink          :
-				'http://play.google.com/books/reader?id=uCqioAEACAAJ&hl=&printsec=frontcover&source=gbs_api',
-			accessViewStatus       : 'NONE',
-			quoteSharingAllowed    : false
-		},
-		searchInfo : {
-			textSnippet :
-				'Probe the depth and richness of your favorite titles and usher your students into an understanding of what really made us want to teach literature in the first place.'
-		}
-	},
-	{
-		kind       : 'books#volume',
-		id         : 'xYK5oAEACAAJ',
-		etag       : 'jPVfyUMHWn0',
-		selfLink   : 'https://www.googleapis.com/books/v1/volumes/xYK5oAEACAAJ',
-		volumeInfo : {
-			title               :
-				'Flowers for Algernon - Multiple Critical Perspectives',
-			authors             : [
-				'Daniel Keyes'
-			],
-			publishedDate       : '2011-01-01',
-			description         :
-				'Probe the depth and richness of your favorite titles and usher your students into an understanding of what really made us want to teach literature in the first place. Each guide offers clear and concise explanations of three different critical perspectives.',
-			industryIdentifiers : [
-				{
-					type       : 'ISBN_10',
-					identifier : '1935467964'
-				},
-				{
-					type       : 'ISBN_13',
-					identifier : '9781935467960'
-				}
-			],
-			readingModes        : {
-				text  : false,
-				image : false
-			},
-			printType           : 'BOOK',
-			maturityRating      : 'NOT_MATURE',
-			allowAnonLogging    : false,
-			contentVersion      : 'preview-1.0.0',
-			language            : 'en',
-			previewLink         :
-				'http://books.google.co.in/books?id=xYK5oAEACAAJ&dq=flowers+inauthor:keyes&hl=&cd=7&source=gbs_api',
-			infoLink            :
-				'http://books.google.co.in/books?id=xYK5oAEACAAJ&dq=flowers+inauthor:keyes&hl=&source=gbs_api',
-			canonicalVolumeLink :
-				'https://books.google.com/books/about/Flowers_for_Algernon_Multiple_Critical_P.html?hl=&id=xYK5oAEACAAJ'
-		},
-		saleInfo   : {
-			country     : 'IN',
-			saleability : 'NOT_FOR_SALE',
-			isEbook     : false
-		},
-		accessInfo : {
-			country                : 'IN',
-			viewability            : 'NO_PAGES',
-			embeddable             : false,
-			publicDomain           : false,
-			textToSpeechPermission : 'ALLOWED',
-			epub                   : {
-				isAvailable : false
-			},
-			pdf                    : {
-				isAvailable : false
-			},
-			webReaderLink          :
-				'http://play.google.com/books/reader?id=xYK5oAEACAAJ&hl=&printsec=frontcover&source=gbs_api',
-			accessViewStatus       : 'NONE',
-			quoteSharingAllowed    : false
-		},
-		searchInfo : {
-			textSnippet :
-				'Probe the depth and richness of your favorite titles and usher your students into an understanding of what really made us want to teach literature in the first place.'
-		}
-	},
-	{
-		kind       : 'books#volume',
-		id         : 'jQxIAQAAMAAJ',
-		etag       : 'N+jEUaaP57o',
-		selfLink   : 'https://www.googleapis.com/books/v1/volumes/jQxIAQAAMAAJ',
-		volumeInfo : {
-			title               : 'The Five Senses',
-			authors             : [
-				'Angela Mary Keyes'
-			],
-			publishedDate       : '1911',
-			industryIdentifiers : [
-				{
-					type       : 'OTHER',
-					identifier : 'IOWA:31858006011708'
-				}
-			],
-			readingModes        : {
-				text  : false,
-				image : false
-			},
-			pageCount           : 250,
-			printType           : 'BOOK',
-			categories          : [
-				'Senses and sensation'
-			],
-			maturityRating      : 'NOT_MATURE',
-			allowAnonLogging    : false,
-			contentVersion      : '0.0.1.0.preview.0',
-			panelizationSummary : {
-				containsEpubBubbles  : false,
-				containsImageBubbles : false
-			},
-			imageLinks          : {
-				smallThumbnail :
-					'http://books.google.com/books/content?id=jQxIAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api',
-				thumbnail      :
-					'http://books.google.com/books/content?id=jQxIAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api'
-			},
-			language            : 'en',
-			previewLink         :
-				'http://books.google.co.in/books?id=jQxIAQAAMAAJ&q=flowers+inauthor:keyes&dq=flowers+inauthor:keyes&hl=&cd=8&source=gbs_api',
-			infoLink            :
-				'http://books.google.co.in/books?id=jQxIAQAAMAAJ&dq=flowers+inauthor:keyes&hl=&source=gbs_api',
-			canonicalVolumeLink :
-				'https://books.google.com/books/about/The_Five_Senses.html?hl=&id=jQxIAQAAMAAJ'
-		},
-		saleInfo   : {
-			country     : 'IN',
-			saleability : 'NOT_FOR_SALE',
-			isEbook     : false
-		},
-		accessInfo : {
-			country                : 'IN',
-			viewability            : 'NO_PAGES',
-			embeddable             : false,
-			publicDomain           : false,
-			textToSpeechPermission : 'ALLOWED',
-			epub                   : {
-				isAvailable : false
-			},
-			pdf                    : {
-				isAvailable : false
-			},
-			webReaderLink          :
-				'http://play.google.com/books/reader?id=jQxIAQAAMAAJ&hl=&printsec=frontcover&source=gbs_api',
-			accessViewStatus       : 'NONE',
-			quoteSharingAllowed    : false
-		},
-		searchInfo : {
-			textSnippet :
-				'Then their mother told them a very interesting thing about \u003cb\u003eflowers\u003c/b\u003e . She said that \u003cbr\u003e\nwhen the \u003cb\u003eflowers\u003c/b\u003e open wide in their brightest colors in sunny warm weather , the \u003cbr\u003e\ninsects see them and fly in to get the honey . But the insects carry off something&nbsp;...'
-		}
-	},
-	{
-		kind       : 'books#volume',
-		id         : 'TkxNSot3eMEC',
-		etag       : 'EypLOBSZIsg',
-		selfLink   : 'https://www.googleapis.com/books/v1/volumes/TkxNSot3eMEC',
-		volumeInfo : {
-			title               : 'Anybody Out There',
-			authors             : [
-				'Marian Keyes'
-			],
-			publisher           : 'Penguin UK',
-			publishedDate       : '2007-02-08',
-			description         :
-				"The deliciously witty and compelling No. 1 bestseller about a woman fighting to get her old life back, from the bestselling author of Grown Ups 'Richly enjoyable' DAILY TELEGRAPH ________ 'I'd lost my place in the universe. It had closed up and there was nowhere for me to be. I was more lost than I had known it was possible for any human to be . . .' Anna Walsh is covered in bandages and lying in her parents' Good Front Room. She's dreaming of leaving Dublin and returning to New York. To her home. To her job. And most of all to her husband Aidan. Unfortunately, her family have other ideas. She's staying put. And Aidan? Well he's refusing to even take her calls. What has pushed Anna so far from everything that she loves? Is she the only one who can put it all right? And if not, who is? . . . ________ 'Keyes writes brilliantly, as always, about love, grief, jealousy and friendship' Daily Mail 'A wonderful, subtle, hilarious and highly sophisticated novel' Evening Standard 'High quality entertainment' Marie Claire",
-			industryIdentifiers : [
-				{
-					type       : 'ISBN_13',
-					identifier : '9780141904757'
-				},
-				{
-					type       : 'ISBN_10',
-					identifier : '0141904755'
-				}
-			],
-			readingModes        : {
-				text  : true,
-				image : false
-			},
-			pageCount           : 624,
-			printType           : 'BOOK',
+				'https://books.google.com/books/about/To_Kill_a_Mockingbird.html?hl=&id=PGR2AwAAQBAJ',
 			categories          : [
 				'Fiction'
 			],
-			averageRating       : 4,
-			ratingsCount        : 37,
+			contentVersion      : '1.26.24.0.preview.2',
+			description         :
+				"Voted America's Best-Loved Novel in PBS's The Great American Read Harper Lee's Pulitzer Prize-winning masterwork of honor and injustice in the deep South—and the heroism of one man in the face of blind and violent hatred One of the most cherished stories of all time, To Kill a Mockingbird has been translated into more than forty languages, sold more than forty million copies worldwide, served as the basis for an enormously popular motion picture, and was voted one of the best novels of the twentieth century by librarians across the country. A gripping, heart-wrenching, and wholly remarkable tale of coming-of-age in a South poisoned by virulent prejudice, it views a world of great beauty and savage inequities through the eyes of a young girl, as her father—a crusading local lawyer—risks everything to defend a black man unjustly accused of a terrible crime.",
+			imageLinks          : {
+				smallThumbnail :
+					'http://books.google.com/books/content?id=PGR2AwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api',
+				thumbnail      :
+					'http://books.google.com/books/content?id=PGR2AwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
+			},
+			industryIdentifiers : [
+				{
+					identifier : '9780062368683',
+					type       : 'ISBN_13'
+				},
+				{
+					identifier : '0062368680',
+					type       : 'ISBN_10'
+				}
+			],
+			infoLink            :
+				'http://books.google.co.in/books?id=PGR2AwAAQBAJ&dq=to+kill+a+mockingbird&hl=&source=gbs_api',
+			language            : 'en',
 			maturityRating      : 'NOT_MATURE',
-			allowAnonLogging    : true,
-			contentVersion      : '2.22.25.0.preview.2',
+			pageCount           : 336,
 			panelizationSummary : {
 				containsEpubBubbles  : false,
 				containsImageBubbles : false
 			},
-			imageLinks          : {
-				smallThumbnail :
-					'http://books.google.com/books/content?id=TkxNSot3eMEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api',
-				thumbnail      :
-					'http://books.google.com/books/content?id=TkxNSot3eMEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
-			},
-			language            : 'en',
 			previewLink         :
-				'http://books.google.co.in/books?id=TkxNSot3eMEC&pg=PT139&dq=flowers+inauthor:keyes&hl=&cd=9&source=gbs_api',
-			infoLink            :
-				'https://play.google.com/store/books/details?id=TkxNSot3eMEC&source=gbs_api',
-			canonicalVolumeLink :
-				'https://play.google.com/store/books/details?id=TkxNSot3eMEC'
+				'http://books.google.co.in/books?id=PGR2AwAAQBAJ&printsec=frontcover&dq=to+kill+a+mockingbird&hl=&cd=1&source=gbs_api',
+			printType           : 'BOOK',
+			publishedDate       : '2014-07-08',
+			publisher           : 'Harper Collins',
+			ratingsCount        : 2170,
+			readingModes        : {
+				image : false,
+				text  : true
+			},
+			title               : 'To Kill a Mockingbird'
+		}
+	},
+	{
+		accessInfo : {
+			accessViewStatus       : 'SAMPLE',
+			country                : 'IN',
+			embeddable             : true,
+			epub                   : {
+				acsTokenLink :
+					'http://books.google.co.in/books/download/The_Fault_in_Our_Stars-sample-epub.acsm?id=Qk8n0olOX5MC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api',
+				isAvailable  : true
+			},
+			pdf                    : {
+				isAvailable : false
+			},
+			publicDomain           : false,
+			quoteSharingAllowed    : false,
+			textToSpeechPermission : 'ALLOWED_FOR_ACCESSIBILITY',
+			viewability            : 'PARTIAL',
+			webReaderLink          :
+				'http://play.google.com/books/reader?id=Qk8n0olOX5MC&hl=&printsec=frontcover&source=gbs_api'
 		},
+		etag       : 'ni6qZXHERBY',
+		id         : 'Qk8n0olOX5MC',
+		kind       : 'books#volume',
 		saleInfo   : {
+			buyLink     :
+				'https://play.google.com/store/books/details?id=Qk8n0olOX5MC&rdid=book-Qk8n0olOX5MC&rdot=1&source=gbs_api',
 			country     : 'IN',
-			saleability : 'FOR_SALE',
 			isEbook     : true,
 			listPrice   : {
 				amount       : 400.02,
 				currencyCode : 'INR'
 			},
-			retailPrice : {
-				amount       : 280.01,
-				currencyCode : 'INR'
-			},
-			buyLink     :
-				'https://play.google.com/store/books/details?id=TkxNSot3eMEC&rdid=book-TkxNSot3eMEC&rdot=1&source=gbs_api',
 			offers      : [
 				{
 					finskyOfferType : 1,
@@ -1738,142 +1240,770 @@ export const books = [
 						currencyCode   : 'INR'
 					},
 					retailPrice     : {
-						amountInMicros : 280010000,
+						amountInMicros : 99000000,
 						currencyCode   : 'INR'
 					}
 				}
-			]
-		},
-		accessInfo : {
-			country                : 'IN',
-			viewability            : 'PARTIAL',
-			embeddable             : true,
-			publicDomain           : false,
-			textToSpeechPermission : 'ALLOWED_FOR_ACCESSIBILITY',
-			epub                   : {
-				isAvailable  : true,
-				acsTokenLink :
-					'http://books.google.co.in/books/download/Anybody_Out_There-sample-epub.acsm?id=TkxNSot3eMEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api'
+			],
+			retailPrice : {
+				amount       : 99,
+				currencyCode : 'INR'
 			},
-			pdf                    : {
-				isAvailable : false
-			},
-			webReaderLink          :
-				'http://play.google.com/books/reader?id=TkxNSot3eMEC&hl=&printsec=frontcover&source=gbs_api',
-			accessViewStatus       : 'SAMPLE',
-			quoteSharingAllowed    : false
+			saleability : 'FOR_SALE'
 		},
 		searchInfo : {
 			textSnippet :
-				'Nervously, I sniffed the air. It was some sort of fresh \u003cb\u003eflower\u003c/b\u003e. I recognized the scent, \u003cbr\u003e\nI just couldn&#39;t ... and then I got it. ... There were no fresh \u003cb\u003eflowers\u003c/b\u003e in the apartment. \u003cbr\u003e\nBut the smell was undeniable. I wasn&#39;t imagining it. It was real, the air was thick&nbsp;...'
-		}
-	},
-	{
-		kind       : 'books#volume',
-		id         : 'qCEe-2bRJXAC',
-		etag       : 'oQ0VPKt2dtM',
-		selfLink   : 'https://www.googleapis.com/books/v1/volumes/qCEe-2bRJXAC',
+				'Praise for The Fault in Our Stars: Sunday Times (Culture) &#39;A touching, often fiercely funny novel&#39; The Sun on Sunday (Fabulous Magazine) &#39;So good I think it should be compulsory reading for everyone!'
+		},
+		selfLink   : 'https://www.googleapis.com/books/v1/volumes/Qk8n0olOX5MC',
 		volumeInfo : {
-			title               : 'Last Chance Saloon',
+			allowAnonLogging    : true,
 			authors             : [
-				'Marian Keyes'
+				'John Green'
 			],
-			publisher           : 'Penguin UK',
-			publishedDate       : '2005-07-07',
+			averageRating       : 4.5,
+			canonicalVolumeLink :
+				'https://play.google.com/store/books/details?id=Qk8n0olOX5MC',
+			categories          : [
+				'Young Adult Fiction'
+			],
+			contentVersion      : '2.22.25.0.preview.2',
 			description         :
-				"Discover the gorgeously funny and heartwarming bestseller about final chances from the No 1. bestselling author of Grown Ups 'Plenty of heart, lots of laughs, and a fantastic twist in the tail' COSMOPOLITAN ___________ 'Love is blind, there was no doubt about it. In Tara's case it was also deaf, dumb, dyslexic, had a bad hip and the beginnings of Alzheimer's . . .' Tara, Katherine and Fintan have been best friends since they were teenagers. Now in their early thirties, they've been living it up in London for ten years. But what have they to show for a decade of hedonism? Sure, Tara's got a boyfriend - but only because she's terrified of spending five minutes alone. Katherine, on the other hand, has a neatness fetish that won't let anyone too close to mess up her life. And Fintan? Well, he has everything. Until he learns that without your health, you've got nothing . . . All three are drinking in the last chance saloon and they're about to discover that if you don't change your life, life has a way of changing you . . . 'A comforting doorstopper of a read that's as addictive as solitaire' Daily Mail ___________ Praise for Marian Keyes 'An outstanding writer and chronicler of our times' Independent on Sunday 'Mercilessly funny' Times 'The voice of a generation' Daily Mirror",
+				"I fell in love the way you fall asleep: slowly, then all at once. Despite the tumour-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a gorgeous plot twist named Augustus Waters suddenly appears at Cancer Kid Support Group, Hazel's story is about to be completely rewritten. Insightful, bold, irreverent, and raw, The Fault in Our Stars brilliantly explores the funny, thrilling, and tragic business of being alive and in love. Praise for The Fault in Our Stars: Sunday Times (Culture) 'A touching, often fiercely funny novel' The Sun on Sunday (Fabulous Magazine) 'So good I think it should be compulsory reading for everyone!' Daily Express 'John Green brilliantly captures the voices of a young generation while instilling it with the wisdom of a life that has lived too much yet will never live enough' The Metro - 2013 Best Fiction 'The love affair of two terminally ill teenagers could be mawkish. In fact, it's funny, clever, irreverent and life-affirming.' Grazia 'So good!' Good Housekeeping 'As funny as it is heartbreaking... we defy you not to fall in love with its main characters, Hazel and Augustus.' The Tablet 'A humourous and poignant love story... It's terrifically funny... as well as a moving exploration of loss and grief. And no, it's so much not just for teenage cancer sufferers... it's for everyone.' Bliss 'If you need inspiration when it comes to making the most of a moment, this one is for you' Mizz 'Insightful, bold, irreverent and raw, if this doesn't make you cry, it'll definitely make you think, laugh and maybe even fall in love yourself!'",
+			imageLinks          : {
+				smallThumbnail :
+					'http://books.google.com/books/content?id=Qk8n0olOX5MC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api',
+				thumbnail      :
+					'http://books.google.com/books/content?id=Qk8n0olOX5MC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
+			},
 			industryIdentifiers : [
 				{
-					type       : 'ISBN_13',
-					identifier : '9780141909820'
+					identifier : '9780141345642',
+					type       : 'ISBN_13'
 				},
 				{
-					type       : 'ISBN_10',
-					identifier : '014190982X'
+					identifier : '0141345640',
+					type       : 'ISBN_10'
 				}
 			],
-			readingModes        : {
-				text  : true,
-				image : false
-			},
-			pageCount           : 640,
-			printType           : 'BOOK',
-			categories          : [
-				'Fiction'
-			],
-			averageRating       : 3,
-			ratingsCount        : 17,
+			infoLink            :
+				'https://play.google.com/store/books/details?id=Qk8n0olOX5MC&source=gbs_api',
+			language            : 'un',
 			maturityRating      : 'NOT_MATURE',
-			allowAnonLogging    : true,
-			contentVersion      : '3.26.25.0.preview.2',
+			pageCount           : 352,
 			panelizationSummary : {
 				containsEpubBubbles  : false,
 				containsImageBubbles : false
 			},
-			imageLinks          : {
-				smallThumbnail :
-					'http://books.google.com/books/content?id=qCEe-2bRJXAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api',
-				thumbnail      :
-					'http://books.google.com/books/content?id=qCEe-2bRJXAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
-			},
-			language            : 'en',
 			previewLink         :
-				'http://books.google.co.in/books?id=qCEe-2bRJXAC&pg=PT245&dq=flowers+inauthor:keyes&hl=&cd=10&source=gbs_api',
-			infoLink            :
-				'https://play.google.com/store/books/details?id=qCEe-2bRJXAC&source=gbs_api',
-			canonicalVolumeLink :
-				'https://play.google.com/store/books/details?id=qCEe-2bRJXAC'
+				'http://books.google.co.in/books?id=Qk8n0olOX5MC&printsec=frontcover&dq=the+fault+in+our+stars&hl=&cd=1&source=gbs_api',
+			printType           : 'BOOK',
+			publishedDate       : '2012-05-03',
+			publisher           : 'Penguin UK',
+			ratingsCount        : 1795,
+			readingModes        : {
+				image : false,
+				text  : true
+			},
+			title               : 'The Fault in Our Stars'
+		}
+	},
+	{
+		accessInfo : {
+			accessViewStatus       : 'NONE',
+			country                : 'IN',
+			embeddable             : false,
+			epub                   : {
+				isAvailable : true
+			},
+			pdf                    : {
+				isAvailable : true
+			},
+			publicDomain           : false,
+			quoteSharingAllowed    : false,
+			textToSpeechPermission : 'ALLOWED',
+			viewability            : 'NO_PAGES',
+			webReaderLink          :
+				'http://play.google.com/books/reader?id=jk87_y-ubE0C&hl=&printsec=frontcover&source=gbs_api'
 		},
-		saleInfo   : {
-			country     : 'IN',
-			saleability : 'FOR_SALE',
-			isEbook     : true,
-			listPrice   : {
-				amount       : 299.9,
-				currencyCode : 'INR'
-			},
-			retailPrice : {
-				amount       : 209.93,
-				currencyCode : 'INR'
-			},
-			buyLink     :
-				'https://play.google.com/store/books/details?id=qCEe-2bRJXAC&rdid=book-qCEe-2bRJXAC&rdot=1&source=gbs_api',
-			offers      : [
+		etag       : '8Gbf0lJckso',
+		id         : 'jk87_y-ubE0C',
+		kind       : 'books#volume',
+		layerInfo  : {
+			layers : [
 				{
-					finskyOfferType : 1,
-					listPrice       : {
-						amountInMicros : 299900000,
-						currencyCode   : 'INR'
-					},
-					retailPrice     : {
-						amountInMicros : 209930000,
-						currencyCode   : 'INR'
-					}
+					layerId                  : 'geo',
+					volumeAnnotationsVersion : '26'
 				}
 			]
 		},
+		saleInfo   : {
+			country     : 'IN',
+			isEbook     : false,
+			saleability : 'NOT_FOR_SALE'
+		},
+		selfLink   : 'https://www.googleapis.com/books/v1/volumes/jk87_y-ubE0C',
+		volumeInfo : {
+			allowAnonLogging    : true,
+			authors             : [
+				'J.K. Rowling'
+			],
+			averageRating       : 4,
+			canonicalVolumeLink :
+				'https://play.google.com/store/books/details?id=jk87_y-ubE0C',
+			categories          : [
+				'Fiction / Action & Adventure',
+				'Fiction / Fantasy / Contemporary',
+				'Juvenile Fiction / Action & Adventure / General',
+				'Juvenile Fiction / Fantasy & Magic',
+				'Young Adult Fiction / Action & Adventure / General',
+				'Young Adult Fiction / Fantasy / Wizards & Witches',
+				'Young Adult Fiction / School & Education / Boarding School & Prep School',
+				'Fiction / Fantasy / General',
+				'Juvenile Fiction / School & Education'
+			],
+			contentVersion      : '1.19.18.0.preview.2',
+			description         :
+				"<p><i>'You are sharing the Dark Lord's thoughts and emotions. The Headmaster thinks it inadvisable for this to continue. He wishes me to teach you how to close your mind to the Dark Lord.'</i><br><br>Dark times have come to Hogwarts. After the Dementors' attack on his cousin Dudley, Harry Potter knows that Voldemort will stop at nothing to find him. There are many who deny the Dark Lord's return, but Harry is not alone: a secret order gathers at Grimmauld Place to fight against the Dark forces. Harry must allow Professor Snape to teach him how to protect himself from Voldemort's savage assaults on his mind. But they are growing stronger by the day and Harry is running out of time...<br><br><br><i>Having now become classics of our time, the Harry Potter ebooks never fail to bring comfort and escapism to readers of all ages. With its message of hope, belonging and the enduring power of truth and love, the story of the Boy Who Lived continues to delight generations of new readers.</i></p>",
+			imageLinks          : {
+				smallThumbnail :
+					'http://books.google.com/books/content?id=jk87_y-ubE0C&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE72fSqXaKtAA9OKfc6CnNy2Uzl6Zxmrjmwj8KbyTm-3C0yy2OyVzJGC112rZySvklSI7iG_CIHwj1-Y5k3e9BKeXfAcLLB5qKJBWNr-AzF3g998nmrANRpMp0lSd6abm3AGIMkyT&source=gbs_api',
+				thumbnail      :
+					'http://books.google.com/books/content?id=jk87_y-ubE0C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE720Ih3k1aVuQnrWN3lBq7Wc7IPEFctT1ZAxh4jkleZotCt8LWPEk2AfzLtTdN-JrAlcqOpJ1mpOOTyi1RmAYWoDF-O5bNU0eCCm6CkAdrwodgqO6TvD_MIo-p-YggYPPOyE7W4t&source=gbs_api'
+			},
+			industryIdentifiers : [
+				{
+					identifier : '1781100241',
+					type       : 'ISBN_10'
+				},
+				{
+					identifier : '9781781100240',
+					type       : 'ISBN_13'
+				}
+			],
+			infoLink            :
+				'https://play.google.com/store/books/details?id=jk87_y-ubE0C&source=gbs_api',
+			language            : 'en',
+			maturityRating      : 'NOT_MATURE',
+			pageCount           : 901,
+			panelizationSummary : {
+				containsEpubBubbles  : false,
+				containsImageBubbles : false
+			},
+			previewLink         :
+				'http://books.google.co.in/books?id=jk87_y-ubE0C&hl=&source=gbs_api',
+			printType           : 'BOOK',
+			printedPageCount    : 767,
+			publishedDate       : '2015-12-08',
+			publisher           : 'Pottermore Publishing',
+			ratingsCount        : 161,
+			readingModes        : {
+				image : false,
+				text  : true
+			},
+			title               : 'Harry Potter and the Order of the Phoenix'
+		}
+	},
+	{
 		accessInfo : {
+			accessViewStatus       : 'SAMPLE',
 			country                : 'IN',
-			viewability            : 'PARTIAL',
 			embeddable             : true,
-			publicDomain           : false,
-			textToSpeechPermission : 'ALLOWED_FOR_ACCESSIBILITY',
 			epub                   : {
-				isAvailable  : true,
 				acsTokenLink :
-					'http://books.google.co.in/books/download/Last_Chance_Saloon-sample-epub.acsm?id=qCEe-2bRJXAC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api'
+					'http://books.google.co.in/books/download/Life_of_Pi-sample-epub.acsm?id=A16NdR8h-4AC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api',
+				isAvailable  : true
+			},
+			pdf                    : {
+				acsTokenLink :
+					'http://books.google.co.in/books/download/Life_of_Pi-sample-pdf.acsm?id=A16NdR8h-4AC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api',
+				isAvailable  : true
+			},
+			publicDomain           : false,
+			quoteSharingAllowed    : false,
+			textToSpeechPermission : 'ALLOWED',
+			viewability            : 'PARTIAL',
+			webReaderLink          :
+				'http://play.google.com/books/reader?id=A16NdR8h-4AC&hl=&printsec=frontcover&source=gbs_api'
+		},
+		etag       : 'SVw0qq9s/2w',
+		id         : 'A16NdR8h-4AC',
+		kind       : 'books#volume',
+		layerInfo  : {
+			layers : [
+				{
+					layerId                  : 'geo',
+					volumeAnnotationsVersion : '17'
+				}
+			]
+		},
+		saleInfo   : {
+			country     : 'IN',
+			isEbook     : false,
+			saleability : 'NOT_FOR_SALE'
+		},
+		selfLink   : 'https://www.googleapis.com/books/v1/volumes/A16NdR8h-4AC',
+		volumeInfo : {
+			allowAnonLogging    : true,
+			authors             : [
+				'Yann Martel'
+			],
+			averageRating       : 3.5,
+			canonicalVolumeLink :
+				'https://play.google.com/store/books/details?id=A16NdR8h-4AC',
+			categories          : [
+				'Fiction / Literary',
+				'Fiction / Action & Adventure'
+			],
+			contentVersion      : '3.16.17.0.preview.3',
+			description         :
+				'<p>MORE THAN SEVEN MILLION COPIES SOLD</p><p>The beloved and bestselling novel and winner of the Booker Prize, <i>Life of Pi</i>.</p><p><i>New York Times</i> Bestseller * <i>Los Angeles Times</i> Bestseller * <i>Washington Post</i> Bestseller * <i>San Francisco Chronicle</i> Bestseller * <i>Chicago Tribune</i> Bestseller </p><p>"A story to make you believe in the soul-sustaining power of fiction."—<i>Los Angeles Times Book Review </i></p><p>After the sinking of a cargo ship, a solitary lifeboat remains bobbing on the wild blue Pacific. The only survivors from the wreck are a sixteen-year-old boy named Pi, a hyena, a wounded zebra, an orangutan—and a 450-pound royal bengal tiger. The scene is set for one of the most extraordinary and beloved works of fiction in recent years. <p>Universally acclaimed upon publication, <i>Life of Pi</i> is a modern classic.',
+			imageLinks          : {
+				extraLarge     :
+					'http://books.google.com/books/content?id=A16NdR8h-4AC&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE72pBr3n12hp1lXgquP1uIql-552QxvcAMx8A09HH_q3IabXIjBXIrzuu-oKSnGWduRlvBRuz7MGIfhAIMr755ikDLIspv8nycbosiHqjVH3wf_aADzAfqfy27cZnCPA5p6ow30y&source=gbs_api',
+				large          :
+					'http://books.google.com/books/content?id=A16NdR8h-4AC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE70HHC_-GyotfLB42tZHipXKTPyfwDM138C_-Ljue0CLDgvvgRFef0GrlVigMAeW8V-uRWCZpkbiojfgs9HKY2BmIfA8kkuxifbV6_8FERDlYkGttSw1buTsIiLqRwGnG_LbcNs1&source=gbs_api',
+				medium         :
+					'http://books.google.com/books/content?id=A16NdR8h-4AC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE72acpzoXYU8Y9tUY634t-8oE4Bf0Ayjf28x--tPh75HdlOVWnnL6O5Z8C4HKY-lFHM47Y6qkIq1eYeGv31yRPfLYcdqPh0Gpu5lHu8BYiCVdETTjvD00BZNWlIH9iH4eLSwBFTP&source=gbs_api',
+				small          :
+					'http://books.google.com/books/content?id=A16NdR8h-4AC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE737pKv0OEtCz1nZVW_c0y_naYUoj9sE89JXELQ-oFrEK8HP2iWX4qquuAhjmqC5i3GKAbfT93Ja5Cx_r-TClAXSmCKu3Vw92I2qXu2zoNMXxQPzYFlDme1CMRBrlHFqHuVzWDeB&source=gbs_api',
+				smallThumbnail :
+					'http://books.google.com/books/content?id=A16NdR8h-4AC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE72vwkogQSTwJvFYAjiZn_eMQS6MttJVTc1bIYdeYIcE_6YGR7K3-9Ixl8OT5GA2gI9dgS5utxEi3lOn1Ufn5pw5nnl9wR9y5SgMSfbbF7EBly7MIx_1fud_b8VZpzSsKfoa5wzU&source=gbs_api',
+				thumbnail      :
+					'http://books.google.com/books/content?id=A16NdR8h-4AC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71_CEIgZQpBLSLLY9zYfLyEXsXuso3oH1ujmt_Doz839ywkbrORBgVThjjOl6UH4h8bqPrDyKakTGLk5y96Cp2flGiARLcM-IY8-PB5Yn4PYVZdviwrMtJxMUNtoLedyd4JUJJd&source=gbs_api'
+			},
+			industryIdentifiers : [
+				{
+					identifier : '9780547416113',
+					type       : 'ISBN_13'
+				},
+				{
+					identifier : '0547416113',
+					type       : 'ISBN_10'
+				}
+			],
+			infoLink            :
+				'https://play.google.com/store/books/details?id=A16NdR8h-4AC&source=gbs_api',
+			language            : 'en',
+			maturityRating      : 'NOT_MATURE',
+			pageCount           : 336,
+			panelizationSummary : {
+				containsEpubBubbles  : false,
+				containsImageBubbles : false
+			},
+			previewLink         :
+				'http://books.google.co.in/books?id=A16NdR8h-4AC&hl=&source=gbs_api',
+			printType           : 'BOOK',
+			printedPageCount    : 419,
+			publishedDate       : '2002-06-04',
+			publisher           : 'Houghton Mifflin Harcourt',
+			ratingsCount        : 2808,
+			readingModes        : {
+				image : true,
+				text  : true
+			},
+			title               : 'Life of Pi'
+		}
+	},
+	{
+		accessInfo : {
+			accessViewStatus       : 'SAMPLE',
+			country                : 'IN',
+			embeddable             : true,
+			epub                   : {
+				isAvailable : false
 			},
 			pdf                    : {
 				isAvailable : false
 			},
+			publicDomain           : false,
+			quoteSharingAllowed    : false,
+			textToSpeechPermission : 'ALLOWED',
+			viewability            : 'PARTIAL',
 			webReaderLink          :
-				'http://play.google.com/books/reader?id=qCEe-2bRJXAC&hl=&printsec=frontcover&source=gbs_api',
-			accessViewStatus       : 'SAMPLE',
-			quoteSharingAllowed    : false
+				'http://play.google.com/books/reader?id=Coi9AwAAQBAJ&hl=&printsec=frontcover&source=gbs_api'
 		},
-		searchInfo : {
-			textSnippet :
-				'&#39;Let&#39;s go over here and look at the \u003cb\u003eflowers\u003c/b\u003e in the \u003cb\u003eflower\u003c/b\u003e shop and pretend we&#39;re at \u003cbr\u003e\nhome.&#39; Yasmin Al-Shari anxiously watched them shamble off. The old lady did \u003cbr\u003e\nlook very like the grandmother in The Beverly Hillbillies. Had she just lost an&nbsp;...'
+		etag       : '15XdiDLg4eE',
+		id         : 'Coi9AwAAQBAJ',
+		kind       : 'books#volume',
+		saleInfo   : {
+			country     : 'IN',
+			isEbook     : false,
+			saleability : 'NOT_FOR_SALE'
+		},
+		selfLink   : 'https://www.googleapis.com/books/v1/volumes/Coi9AwAAQBAJ',
+		volumeInfo : {
+			allowAnonLogging    : false,
+			authors             : [
+				'Lois Lowry'
+			],
+			averageRating       : 4,
+			canonicalVolumeLink :
+				'https://play.google.com/store/books/details?id=Coi9AwAAQBAJ',
+			categories          : [
+				'Juvenile Fiction / Media Tie-In',
+				'Juvenile Fiction / Fantasy & Magic',
+				'Juvenile Fiction / Science Fiction / General',
+				'Juvenile Fiction / Dystopian',
+				'YOUNG ADULT FICTION / Boys & Men',
+				'YOUNG ADULT FICTION / Dystopian'
+			],
+			contentVersion      : 'preview-1.0.0',
+			description         :
+				"<p>Now a major motion picture, Lois Lowry's powerful and provocative Newbery Medal-winning tale has become one of the most influential novels of our time. <p> The story focuses on twelve-year-old Jonas who lives in a seemingly ideal, if colorless, world full of contentment and conformity. But when he's given his life assignment as the Receiver of Memory, he begins to understand the dark secrets that form the foundation of his fragile community. This movie tie-in edition features cover art from the movie and exclusive Q&A with cast members, including Taylor Swift, Brenton Thwaites and Cameron Monaghan.</p>",
+			dimensions          : {
+				height    : '21.00 cm',
+				thickness : '1.80 cm',
+				width     : '14.00 cm'
+			},
+			imageLinks          : {
+				extraLarge     :
+					'http://books.google.com/books/publisher/content?id=Coi9AwAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE71AZvoVZA1UgvmYTt3oB8gV19GL2alYfp41bx1mtgHjYcg5yd-CKedpUkeZcxu1eQh1PgosOq5iQAfx_skboYGNWF0KZqcRQSOTcTIaYpuZH5MSpjxHIGMbF5JqgeA-Dj-8DA0N&source=gbs_api',
+				large          :
+					'http://books.google.com/books/publisher/content?id=Coi9AwAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE70boYHQQec3RgwnBxRcOCaCpJNDWycIszLWJMXxwY3ud7qmWokpV3dGD8xvDLWspJoYky15-JkPGtAI1WVKWes6UfXJHFjDupMWFLyNmf0j7I2JAsqOJfd26prG5UDaApi7MLk5&source=gbs_api',
+				medium         :
+					'http://books.google.com/books/publisher/content?id=Coi9AwAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE72q4llUdyPJnYKLPSODEWhq3PJC3jy36VhxuZrjMlRGfqIaQoUJn0r8xUgASKEyFAzb6WKgZKolLMOwEB48Bz0awpQ8xGiMJqdeAKg_-9HbgVGxzBEEYJ_vtJZnbLb2fOvpP3fr&source=gbs_api',
+				small          :
+					'http://books.google.com/books/publisher/content?id=Coi9AwAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE72k04K9NNchgHaDHcdT4_QSWKS0yZSHI3G_yi57XZBucFD4fY49v76WK3dprgz57duNQLHGb1si6kVHqxFN-Z350obhe-g2hnX5PlGLTXeXD1KGrUDp04E2FMzRmwcOuP0ath0g&source=gbs_api',
+				smallThumbnail :
+					'http://books.google.com/books/publisher/content?id=Coi9AwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE72qUtdGpCMTk1LzObor3kzgyo99XegYQltikOcqJtPXDPWy8j0uOtFCrviaXA2ABacADgy1elTdK3Sr59dW_RhiS0rh-4Nz8mOR752OqryLHuqIgsPnQybHE-jtrx4KZsu9jUx1&source=gbs_api',
+				thumbnail      :
+					'http://books.google.com/books/publisher/content?id=Coi9AwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70uIGnN3O8aTmsa_Ux1GFYLi-gaENrxDug6YR8ava_fdBQZMbhMRHc8cxN8fX83CiZ5n97wNYRzykdat7boZyG3WVi1dX8x-TXVyM_lvBf2v0ap0AFr6QFJWDv7vPjHtM5pKS_m&source=gbs_api'
+			},
+			industryIdentifiers : [
+				{
+					identifier : '054434068X',
+					type       : 'ISBN_10'
+				},
+				{
+					identifier : '9780544340688',
+					type       : 'ISBN_13'
+				}
+			],
+			infoLink            :
+				'https://play.google.com/store/books/details?id=Coi9AwAAQBAJ&source=gbs_api',
+			language            : 'en',
+			maturityRating      : 'NOT_MATURE',
+			pageCount           : 240,
+			previewLink         :
+				'http://books.google.co.in/books?id=Coi9AwAAQBAJ&hl=&source=gbs_api',
+			printType           : 'BOOK',
+			printedPageCount    : 257,
+			publishedDate       : '2014',
+			publisher           : 'Houghton Mifflin Harcourt',
+			ratingsCount        : 3959,
+			readingModes        : {
+				image : true,
+				text  : false
+			},
+			title               : 'The Giver'
+		}
+	},
+	{
+		accessInfo : {
+			accessViewStatus       : 'SAMPLE',
+			country                : 'IN',
+			embeddable             : true,
+			epub                   : {
+				acsTokenLink :
+					'http://books.google.co.in/books/download/1984-sample-epub.acsm?id=kotPYEqx7kMC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api',
+				isAvailable  : true
+			},
+			pdf                    : {
+				acsTokenLink :
+					'http://books.google.co.in/books/download/1984-sample-pdf.acsm?id=kotPYEqx7kMC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api',
+				isAvailable  : true
+			},
+			publicDomain           : false,
+			quoteSharingAllowed    : false,
+			textToSpeechPermission : 'ALLOWED',
+			viewability            : 'PARTIAL',
+			webReaderLink          :
+				'http://play.google.com/books/reader?id=kotPYEqx7kMC&hl=&printsec=frontcover&source=gbs_api'
+		},
+		etag       : 'TX6AJFE8UdM',
+		id         : 'kotPYEqx7kMC',
+		kind       : 'books#volume',
+		layerInfo  : {
+			layers : [
+				{
+					layerId                  : 'geo',
+					volumeAnnotationsVersion : '24'
+				}
+			]
+		},
+		saleInfo   : {
+			buyLink     :
+				'https://play.google.com/store/books/details?id=kotPYEqx7kMC&rdid=book-kotPYEqx7kMC&rdot=1&source=gbs_api',
+			country     : 'IN',
+			isEbook     : true,
+			listPrice   : {
+				amount       : 686.75,
+				currencyCode : 'INR'
+			},
+			offers      : [
+				{
+					finskyOfferType : 1,
+					listPrice       : {
+						amountInMicros : 686750000,
+						currencyCode   : 'INR'
+					},
+					retailPrice     : {
+						amountInMicros : 343380000,
+						currencyCode   : 'INR'
+					}
+				}
+			],
+			retailPrice : {
+				amount       : 343.38,
+				currencyCode : 'INR'
+			},
+			saleability : 'FOR_SALE'
+		},
+		selfLink   : 'https://www.googleapis.com/books/v1/volumes/kotPYEqx7kMC',
+		volumeInfo : {
+			allowAnonLogging    : true,
+			authors             : [
+				'George Orwell'
+			],
+			averageRating       : 4.5,
+			canonicalVolumeLink :
+				'https://play.google.com/store/books/details?id=kotPYEqx7kMC',
+			categories          : [
+				'Fiction / Classics',
+				'Fiction / Literary',
+				'Fiction / Dystopian',
+				'Fiction / Political'
+			],
+			contentVersion      : '2.25.22.0.preview.3',
+			description         :
+				'<b>A PBS Great American Read Top 100 Pick</b><br><br> With extraordinary relevance and renewed popularity, George Orwell’s <i>1984</i> takes on new life in this edition.<br><br> “Orwell saw, to his credit, that the act of falsifying reality is only secondarily a way of changing perceptions. It is, above all, a way of asserting power.”—The New Yorker<br>  <br> In <i>1984</i>, London is a grim city in the totalitarian state of Oceania where Big Brother is always watching you and the Thought Police can practically read your mind. Winston Smith is a man in grave danger for the simple reason that his memory still functions. Drawn into a forbidden love affair, Winston finds the courage to join a secret revolutionary organization called The Brotherhood, dedicated to the destruction of the Party. Together with his beloved Julia, he hazards his life in a deadly match against the powers that be.<br><br> Lionel Trilling said of Orwell’s masterpiece, “<i>1984</i> is a profound, terrifying, and wholly fascinating book. It is a fantasy of the political future, and like any such fantasy, serves its author as a magnifying device for an examination of the present.” Though the year 1984 now exists in the past, Orwell’s novel remains an urgent call for the individual willing to speak truth to power.',
+			imageLinks          : {
+				extraLarge     :
+					'http://books.google.com/books/content?id=kotPYEqx7kMC&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE718P7Mo7uVlmlh1IyIus1x-YH7nGAKM2j2_m1VQHB7uabpp8BuItb2GmsqOnGEX1pSH675oFELubQZpL4HzbI4eyliY52bIjRzHpRebVlbMFURwwQhJgJIdIWLqfGFRDGlR2e11&source=gbs_api',
+				large          :
+					'http://books.google.com/books/content?id=kotPYEqx7kMC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE70dLv-G1m8ceiLXs43a6EXnwqEF_yolvnKx4_sPbPKZpVYFr-KhwkiH-kh_l86F_EfFNChLejMFv09nbWii5eLJKqhfCXu_9zYiiOIdRU0jOcQ-haqgE3RHyXVQpm1ECceBduov&source=gbs_api',
+				medium         :
+					'http://books.google.com/books/content?id=kotPYEqx7kMC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE73eal-JtLcNjSJi1LAHleKxCkmooF4HVqJJ9RIYU8Vkfg9vWf7ZuRhDcq-zQgE3SG4bxtwpbxUhSQJXJpI7IyLk6XXs0V48GWsZ3Cn-tEWirLUCDJkHXXo-Moh7SeJjPwynoeel&source=gbs_api',
+				small          :
+					'http://books.google.com/books/content?id=kotPYEqx7kMC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE72oaXeICjshjgRuFlvwbQA2L1S2E6p4LUvqEEmZr8dDaaTmcXxc2EJiV1diJoUReZg1xfmXJZt_uuOtzBNtx-D32tNfyBGEFjZ106kXZGvzue00v1p_idCciLkuhZoPdjNpgjrJ&source=gbs_api',
+				smallThumbnail :
+					'http://books.google.com/books/content?id=kotPYEqx7kMC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE701AUbpg3Q8jj9bknGdkVugr7JCgN5BWkEfhJiOdvO9MWjX4WeqXG5pQVaYkEWXmpTtKGZ7jTf-fAH_RyxsfX2-37z1qvFDHMT8eiE7JNHesw2amp0diV-L29lIvBPIPUXj1gdi&source=gbs_api',
+				thumbnail      :
+					'http://books.google.com/books/content?id=kotPYEqx7kMC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73g7musdMn6QF-t2xEx9gwiUJdglqKpeZVgQx9BpSVirZdMyw5M6RtRK44nhWf6sdB3ntfGs8owBGn9FLFr1bs0UPRfzfZ_pAGeatVJZgJGiDHQy0MDWKhueBhd1F0zl6m52Ohc&source=gbs_api'
+			},
+			industryIdentifiers : [
+				{
+					identifier : '9780547249643',
+					type       : 'ISBN_13'
+				},
+				{
+					identifier : '0547249640',
+					type       : 'ISBN_10'
+				}
+			],
+			infoLink            :
+				'https://play.google.com/store/books/details?id=kotPYEqx7kMC&source=gbs_api',
+			language            : 'en',
+			maturityRating      : 'NOT_MATURE',
+			pageCount           : 648,
+			panelizationSummary : {
+				containsEpubBubbles  : false,
+				containsImageBubbles : false
+			},
+			previewLink         :
+				'http://books.google.co.in/books?id=kotPYEqx7kMC&hl=&source=gbs_api',
+			printType           : 'BOOK',
+			printedPageCount    : 309,
+			publishedDate       : '1983-10-17',
+			publisher           : 'Houghton Mifflin Harcourt',
+			ratingsCount        : 76,
+			readingModes        : {
+				image : true,
+				text  : true
+			},
+			title               : '1984'
+		}
+	},
+	{
+		accessInfo : {
+			accessViewStatus       : 'SAMPLE',
+			country                : 'IN',
+			embeddable             : true,
+			epub                   : {
+				acsTokenLink :
+					'http://books.google.co.in/books/download/The_Hunger_Games-sample-epub.acsm?id=_zSzAwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api',
+				isAvailable  : true
+			},
+			pdf                    : {
+				isAvailable : false
+			},
+			publicDomain           : false,
+			quoteSharingAllowed    : false,
+			textToSpeechPermission : 'ALLOWED',
+			viewability            : 'PARTIAL',
+			webReaderLink          :
+				'http://play.google.com/books/reader?id=_zSzAwAAQBAJ&hl=&printsec=frontcover&source=gbs_api'
+		},
+		etag       : 'PBPsWxK7f0s',
+		id         : '_zSzAwAAQBAJ',
+		kind       : 'books#volume',
+		layerInfo  : {
+			layers : [
+				{
+					layerId                  : 'geo',
+					volumeAnnotationsVersion : '5'
+				}
+			]
+		},
+		saleInfo   : {
+			country     : 'IN',
+			isEbook     : false,
+			saleability : 'NOT_FOR_SALE'
+		},
+		selfLink   : 'https://www.googleapis.com/books/v1/volumes/_zSzAwAAQBAJ',
+		volumeInfo : {
+			allowAnonLogging    : true,
+			authors             : [
+				'Suzanne Collins'
+			],
+			averageRating       : 4.5,
+			canonicalVolumeLink :
+				'https://play.google.com/store/books/details?id=_zSzAwAAQBAJ',
+			categories          : [
+				'Juvenile Fiction / General'
+			],
+			contentVersion      : '1.1.1.0.preview.2',
+			description         :
+				'Could you survive on your own, in the wild, with everyone fighting against you? Twenty-four are forced to enter. Only the winner survives. In the ruins of a place once known as North America lies the nation of Panem, a shining Capitol surrounded by twelve outlying districts. Each year, the districts are forced by the Capitol to send one boy and one girl between the ages of twelve and eighteen to participate in the Hunger Games, a brutal and terrifying fight to the death -- televised for all of Panem to see. Survival is second nature for sixteen-year-old Katniss Everdeen, who struggles to feed her mother and younger sister by secretly hunting and gathering beyond the fences of District 12. When Katniss steps in to take the place of her sister in the Hunger Games, she knows it may be her death sentence. If she is to survive, she must weigh survival against humanity and life against love.',
+			dimensions          : {
+				height : '20.00 cm'
+			},
+			imageLinks          : {
+				extraLarge     :
+					'http://books.google.com/books/publisher/content?id=_zSzAwAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE72FIvh47FdOO4PqIO0WfOuZ6uT0p230Q0HG6fsNKehQCtMBGQAna9CTBUcREygkGz6PWZKyBu0fCYNO9evMvNKAK16Y68I8uwrbjSlcs2QplG8CTFfExeJU4VMHRTPQcy8gDf90&source=gbs_api',
+				large          :
+					'http://books.google.com/books/publisher/content?id=_zSzAwAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE73sVdRHPKzhVSS29_Ym5sisYfY0SSxhl_Tyq8DrEYkU_gyddiMg9wJ7dIOKe2eKAYgMQ09O0ky77cz3W3_H4ORASLbcp0TEfUJkP3YBSmOSdmK5Cge5-Ub4c8kmCIu7jKV9DjRq&source=gbs_api',
+				medium         :
+					'http://books.google.com/books/publisher/content?id=_zSzAwAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE701WiJAh6bu_HThIQdq-qHBLAOwZJa4DJZRIBezg3kfpjlvnNQnAarvZTf8qSMSrxPH6YNzBm8eXSLl4VerMprJN_vLwDmMZnU7vHdt3m61pJIY_xxf00_qw8fS3MILZeb0m5TV&source=gbs_api',
+				small          :
+					'http://books.google.com/books/publisher/content?id=_zSzAwAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE73OugvstwHR0kTRKCwy2YomIQ4GxsHRKsO37Wn0QUb_lkYr7eBqMra-jj6ZMnXipRXBDEcyGIxK76RUW8E9VXInegodcXuaR1h5PUjuA3Mni6bXNBZGMBDwXK-Pccg3w8bmk4sW&source=gbs_api',
+				smallThumbnail :
+					'http://books.google.com/books/publisher/content?id=_zSzAwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70J3M14eCAYJAln-bwn1JQveNM5dvD813Q7UIvxakkVM-4A_ddAl3W50p-_eJmts89hFfPMdpRCdbCjDLx1UPds3GkFh5Yl2TrY8sfVXhc0v8Q4fjHVd7hh8nbXd-SMycedkVPs&source=gbs_api',
+				thumbnail      :
+					'http://books.google.com/books/publisher/content?id=_zSzAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73CLWGhLg_tKrLo-drWjVVn5eWek0T3Zw6KfmG6FrmLNRnKUm575xJBLCJukqM9a9qAlzysoPQDo-I0eD2J6QzRUh5Vw_A3dbgxuL1RT_S2m1IQE_8vF8-3ELtvcwZRL4X2yWHx&source=gbs_api'
+			},
+			industryIdentifiers : [
+				{
+					identifier : '1407133179',
+					type       : 'ISBN_10'
+				},
+				{
+					identifier : '9781407133171',
+					type       : 'ISBN_13'
+				}
+			],
+			infoLink            :
+				'https://play.google.com/store/books/details?id=_zSzAwAAQBAJ&source=gbs_api',
+			language            : 'en',
+			maturityRating      : 'NOT_MATURE',
+			pageCount           : 464,
+			panelizationSummary : {
+				containsEpubBubbles  : false,
+				containsImageBubbles : false
+			},
+			previewLink         :
+				'http://books.google.co.in/books?id=_zSzAwAAQBAJ&hl=&source=gbs_api',
+			printType           : 'BOOK',
+			printedPageCount    : 298,
+			publishedDate       : '2011-12',
+			publisher           : 'Scholastic',
+			ratingsCount        : 2101,
+			readingModes        : {
+				image : false,
+				text  : true
+			},
+			title               : 'The Hunger Games'
+		}
+	},
+	{
+		accessInfo : {
+			accessViewStatus       : 'NONE',
+			country                : 'IN',
+			embeddable             : false,
+			epub                   : {
+				isAvailable : true
+			},
+			pdf                    : {
+				isAvailable : false
+			},
+			publicDomain           : false,
+			quoteSharingAllowed    : false,
+			textToSpeechPermission : 'ALLOWED',
+			viewability            : 'NO_PAGES',
+			webReaderLink          :
+				'http://play.google.com/books/reader?id=e2EI76-_-vIC&hl=&printsec=frontcover&source=gbs_api'
+		},
+		etag       : 'eP2MAekeeNo',
+		id         : 'e2EI76-_-vIC',
+		kind       : 'books#volume',
+		layerInfo  : {
+			layers : [
+				{
+					layerId                  : 'geo',
+					volumeAnnotationsVersion : '2'
+				}
+			]
+		},
+		saleInfo   : {
+			country     : 'IN',
+			isEbook     : false,
+			saleability : 'NOT_FOR_SALE'
+		},
+		selfLink   : 'https://www.googleapis.com/books/v1/volumes/e2EI76-_-vIC',
+		volumeInfo : {
+			allowAnonLogging    : false,
+			authors             : [
+				'Richelle Mead'
+			],
+			averageRating       : 4,
+			canonicalVolumeLink :
+				'https://play.google.com/store/books/details?id=e2EI76-_-vIC',
+			categories          : [
+				'Juvenile Fiction / General'
+			],
+			contentVersion      : 'preview-1.0.0',
+			description         :
+				"St Vladimir's Academy isn't just any boarding school - hidden away, it's a place where vampires are educated in the ways of magic and half-human teens train to protect them. Rose Hathaway is a Dhampir, a bodyguard for her best friend Lissa, a Moroi Vampire Princess. They've been on the run, but now they're being dragged back to St Vladimir's where the girls must survive a world of forbidden romances, a ruthless social scene and terrifying night time rituals. But most of all, staying alive.",
+			dimensions          : {
+				height    : '20.00 cm',
+				thickness : '2.10 cm',
+				width     : '12.90 cm'
+			},
+			imageLinks          : {
+				smallThumbnail :
+					'http://books.google.com/books/content?id=e2EI76-_-vIC&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE72RdGnUh1opRfIAT7nImiTgMSn2G8p943e4Wuy8UFufPZCUzzPWppWc9o_axM2mSS6ikxHfksYa5_lmqYvZvPY2eKADKV_786W018HYo5urAzshcppOhGjdxzqP6Cv2V76mLvhE&source=gbs_api',
+				thumbnail      :
+					'http://books.google.com/books/content?id=e2EI76-_-vIC&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71QHs4eeypSHdZwKItlUBOlUqGXiW9Fna2_sv4eiOcDJMxwhXnl9PDsYHFYoituerdgSNFZLf2PdK482q342Uw_GhmRCoxAkhczF8weVfFSTZAV5MAzxV-lGWn5rJEgcJcS6-gd&source=gbs_api'
+			},
+			industryIdentifiers : [
+				{
+					identifier : '0141328525',
+					type       : 'ISBN_10'
+				},
+				{
+					identifier : '9780141328522',
+					type       : 'ISBN_13'
+				}
+			],
+			infoLink            :
+				'https://play.google.com/store/books/details?id=e2EI76-_-vIC&source=gbs_api',
+			language            : 'en',
+			maturityRating      : 'NOT_MATURE',
+			pageCount           : 336,
+			previewLink         :
+				'http://books.google.co.in/books?id=e2EI76-_-vIC&hl=&source=gbs_api',
+			printType           : 'BOOK',
+			printedPageCount    : 337,
+			publishedDate       : '2009-05-26',
+			publisher           : 'Penguin Books Limited',
+			ratingsCount        : 280,
+			readingModes        : {
+				image : false,
+				text  : true
+			},
+			title               : 'Vampire Academy'
+		}
+	},
+	{
+		accessInfo : {
+			accessViewStatus       : 'NONE',
+			country                : 'IN',
+			embeddable             : false,
+			epub                   : {
+				isAvailable : true
+			},
+			pdf                    : {
+				isAvailable : true
+			},
+			publicDomain           : false,
+			quoteSharingAllowed    : false,
+			textToSpeechPermission : 'ALLOWED',
+			viewability            : 'NO_PAGES',
+			webReaderLink          :
+				'http://play.google.com/books/reader?id=xszg4sndpVwC&hl=&printsec=frontcover&source=gbs_api'
+		},
+		etag       : 'wj7OfWoeTxc',
+		id         : 'xszg4sndpVwC',
+		kind       : 'books#volume',
+		layerInfo  : {
+			layers : [
+				{
+					layerId                  : 'geo',
+					volumeAnnotationsVersion : '16'
+				}
+			]
+		},
+		saleInfo   : {
+			country     : 'IN',
+			isEbook     : false,
+			saleability : 'NOT_FOR_SALE'
+		},
+		selfLink   : 'https://www.googleapis.com/books/v1/volumes/xszg4sndpVwC',
+		volumeInfo : {
+			allowAnonLogging    : true,
+			authors             : [
+				'Rick Riordan'
+			],
+			averageRating       : 4.5,
+			canonicalVolumeLink :
+				'https://play.google.com/store/books/details?id=xszg4sndpVwC',
+			categories          : [
+				'Juvenile Fiction / Action & Adventure / General',
+				'Juvenile Fiction / Legends, Myths, Fables / Greek & Roman',
+				'Juvenile Fiction / General'
+			],
+			contentVersion      : '0.14.13.0.preview.2',
+			description         :
+				"When the goddess Artemis goes missing, she is believed to have been kidnapped. And now it's up to Percy and his friends to find out what happened. Who is powerful enough to kidnap a goddess?",
+			imageLinks          : {
+				smallThumbnail :
+					'http://books.google.com/books/content?id=xszg4sndpVwC&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE71yOz9v-aoXzlFmBHL43ej5AZNc1X0AtiH-4XNYOud26x-lWnYQadgriasV3FAod3PCx9DERFLJOCXK7UD3zznZBHjEg_ZqEeM5Yz4ht99J9laGGsuP6M2_OFmyDXMEQzmqBjKB&source=gbs_api',
+				thumbnail      :
+					'http://books.google.com/books/content?id=xszg4sndpVwC&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72Eu0rlAbYVuzIOanLLkKQAjEAXYiBbFNyQELJ1cr9hJ-rP95reZiAxF49gEeyULR885yi1viGcgnl9d3RzA613nN7wvi4qn0o8_jrED6hCf8iQ_UHtazUUVJv-dHildZkw6NHJ&source=gbs_api'
+			},
+			industryIdentifiers : [
+				{
+					identifier : '1423131975',
+					type       : 'ISBN_10'
+				},
+				{
+					identifier : '9781423131977',
+					type       : 'ISBN_13'
+				}
+			],
+			infoLink            :
+				'https://play.google.com/store/books/details?id=xszg4sndpVwC&source=gbs_api',
+			language            : 'en',
+			maturityRating      : 'NOT_MATURE',
+			pageCount           : 336,
+			panelizationSummary : {
+				containsEpubBubbles  : false,
+				containsImageBubbles : false
+			},
+			previewLink         :
+				'http://books.google.co.in/books?id=xszg4sndpVwC&hl=&source=gbs_api',
+			printType           : 'BOOK',
+			printedPageCount    : 317,
+			publishedDate       : '2009-05-02',
+			publisher           : 'Disney Book Group',
+			ratingsCount        : 91,
+			readingModes        : {
+				image : false,
+				text  : true
+			},
+			title               :
+				"Titan's Curse, The (Percy Jackson and the Olympians, Book 3)"
 		}
 	}
 ];

@@ -43,9 +43,9 @@ if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'));
 }
 
-app.get('*', (request, response) => {
-	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
+// app.get('*', (request, response) => {
+// 	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+// });
 
 app.get('/robots.txt', (req, res) => {
 	res.sendFile(path.join(__dirname, 'client/build', 'robots.txt'));
@@ -66,48 +66,71 @@ app.post('/search', (req, res) => {
 		shows  : '',
 		movies : ''
 	};
-
+	console.log(q);
 	const getData = async () => {
 		console.log({
 			GBOOKS : process.env.GBOOKS_API_KEY,
 			OMDB   : process.env.OMDB_API_KEY
 		});
 		try {
-			let bookResponse = await fetch(
-				`https://www.googleapis.com/books/v1/volumes?q=${q}&key=${process
-					.env.GBOOKS_API_KEY}`
-			);
-			if (!bookResponse.ok) {
-				const message = `An error has occured: ${bookResponse.status}`;
-				throw new Error(message);
+			let bookJson;
+			try {
+				let bookResponse = await fetch(
+					`https://www.googleapis.com/books/v1/volumes?q=${q}&key=${process
+						.env.GBOOKS_API_KEY}`
+				);
+				if (!bookResponse.ok) {
+					const message = `An error has occured: ${bookResponse.status}`;
+					throw new Error(message);
+				}
+				bookJson = await bookResponse.json();
+			} catch (e) {
+				console.log(e);
+				bookJson = {};
 			}
-			let bookJson = await bookResponse.json();
 			result.books = bookJson;
 			console.log('books found', bookJson);
-			let showsResponse = await fetch(
-				`https://api.tvmaze.com/search/shows?q=${q}`
-			);
-			if (!showsResponse.ok) {
-				const message = `An error has occured: ${showsResponse.status}`;
-				throw new Error(message);
+			let showsJson;
+			try {
+				let showsResponse = await fetch(
+					`https://api.tvmaze.com/search/shows?q=${q}`
+				);
+				if (!showsResponse.ok) {
+					const message = `An error has occured: ${showsResponse.status}`;
+					console.log('here');
+					throw new Error(message);
+				}
+				showsJson = await showsResponse.json();
+				// console.log(showsJson);
+			} catch (e) {
+				console.log('error', e);
+				showsJson = {};
 			}
-			let showsJson = await showsResponse.json();
 			result.shows = showsJson;
-			console.log('shows found', showJson);
+			console.log('shows found', showsJson);
 
-			let moviesResponse = await fetch(
-				`https://www.omdbapi.com/?apikey=${process.env
-					.OMDB_API_KEY}&s=${q}`
-			);
-			if (!moviesResponse.ok) {
-				const message = `An error has occured: ${moviesResponse.status}`;
-				throw new Error(message);
+			let moviesJson;
+			try {
+				let moviesResponse = await fetch(
+					`https://www.omdbapi.com/?apikey=${process.env
+						.OMDB_API_KEY}&s=${q}`
+				);
+				if (!moviesResponse.ok) {
+					const message = `An error has occured: ${moviesResponse.status}`;
+					throw new Error(message);
+				}
+				moviesJson = await moviesResponse.json();
+				// console.log('here');
+				// console.log(moviesJson);
+			} catch (e) {
+				console.log('error', e);
+				moviesJson = {};
 			}
-			let moviesJson = await moviesResponse.json();
 			result.movies = moviesJson;
-			console.log('movies found', movieJson);
+			console.log('movies found', moviesJson);
+			// console.log('here');
 
-			res.send(result);
+			res.status(200).send(result);
 		} catch (e) {
 			res.status(400).send({ message: 'An error occurred :(' });
 		}
@@ -276,8 +299,12 @@ const io = new Server(server, {
 	]
 });
 
-server.listen(port + 1, () => {
-	console.log(`running on port ${port + 1}`);
+app.get('/getPort', (req, res) => {
+	res.send({ port: port + 1 });
+});
+
+server.listen(41262, () => {
+	console.log(`running on port 41262`);
 });
 
 io.on('connection', (socket) => {

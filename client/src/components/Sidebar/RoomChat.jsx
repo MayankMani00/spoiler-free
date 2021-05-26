@@ -9,7 +9,9 @@ import './RoomChat.css';
 
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+
 import Notification from '../Notification/Notification';
+import Spinner from '../Spinner/Spinner';
 
 const MessageTypingArea = ({ socket, username, roomId, sendError }) => {
 	const [
@@ -137,8 +139,8 @@ const RoomChat = ({ username, room, socket }) => {
 			<div className="messages-scroller">
 				<div className="messages-container">
 					{messages.length !== 0 &&
-						messages.map((item) => (
-							<div className="message">
+						messages.map((item, index) => (
+							<div className="message" key={index}>
 								<p
 									className="name"
 									style={{
@@ -173,12 +175,13 @@ const RoomContainer = (props) => {
 	const [
 		socket,
 		setSocket
-	] = useState(opensocket(`${window.location.hostname}:4000`));
+	] = useState(opensocket(`${window.location.hostname}:41262`));
 	useEffect(() => {
 		return () => {
 			socket.disconnect();
 		};
 	});
+	if (!!!socket) return <Spinner />;
 	return (
 		<React.Fragment>
 			<RoomChat key={1} socket={socket} {...props} />

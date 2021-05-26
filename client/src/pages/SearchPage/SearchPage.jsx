@@ -35,6 +35,7 @@ function SearchPage({ query, searchResult, setSearchResult }) {
 				})
 				.catch((error) => {
 					console.log(error.message);
+					console.log(error.response.data);
 					if (!!error.response && !!error.response.data)
 						setNotificationMessage(error.response.data.message);
 					else setNotificationMessage(error.message);
