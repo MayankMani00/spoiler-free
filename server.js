@@ -276,8 +276,8 @@ const io = new Server(server, {
 	]
 });
 
-server.listen(4000, () => {
-	console.log('running on port 5000');
+server.listen(port + 1, () => {
+	console.log(`running on port ${port + 1}`);
 });
 
 io.on('connection', (socket) => {
