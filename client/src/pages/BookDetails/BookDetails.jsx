@@ -22,7 +22,7 @@ const BookDetails = () => {
 			.then((res) => res.json())
 			.then((data) => {
 				setResult(data);
-				console.log(data);
+				// console.log(data);
 			});
 	}, []);
 

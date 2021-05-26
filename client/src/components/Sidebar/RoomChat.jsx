@@ -56,6 +56,7 @@ const MessageTypingArea = ({ socket, username, roomId, sendError }) => {
 					borderColor : 'white'
 				}}
 				onClick={(e) => {
+					e.target.value = '';
 					e.preventDefault();
 					// console.log(newMessage);
 					handleSubmit();
@@ -171,11 +172,11 @@ const RoomChat = ({ username, room, socket }) => {
 };
 
 const RoomContainer = (props) => {
-	console.log(window.location.hostname, window.location.host);
+	// console.log(window.location.hostname, window.location.host);
 	const [
 		socket,
 		setSocket
-	] = useState(opensocket(`${window.location.hostname}:41262`));
+	] = useState(opensocket());
 	useEffect(() => {
 		return () => {
 			socket.disconnect();

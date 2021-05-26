@@ -43,18 +43,18 @@ if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'));
 }
 
-// app.get('*', (request, response) => {
-// 	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-// });
+app.get('*', (request, response) => {
+	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
 
 app.get('/robots.txt', (req, res) => {
 	res.sendFile(path.join(__dirname, 'client/build', 'robots.txt'));
 });
 
-app.listen(port, (error) => {
-	if (error) throw error;
-	console.log('Server running on port ' + port);
-});
+// app.listen(port, (error) => {
+// 	if (error) throw error;
+// 	console.log('Server running on port ' + port);
+// });
 
 app.post('/login', auth.login);
 app.post('/signup', auth.signup);
@@ -89,7 +89,7 @@ app.post('/search', (req, res) => {
 				bookJson = {};
 			}
 			result.books = bookJson;
-			console.log('books found', bookJson);
+			// console.log('books found', bookJson);
 			let showsJson;
 			try {
 				let showsResponse = await fetch(
@@ -107,7 +107,7 @@ app.post('/search', (req, res) => {
 				showsJson = {};
 			}
 			result.shows = showsJson;
-			console.log('shows found', showsJson);
+			// console.log('shows found', showsJson);
 
 			let moviesJson;
 			try {
@@ -127,7 +127,7 @@ app.post('/search', (req, res) => {
 				moviesJson = {};
 			}
 			result.movies = moviesJson;
-			console.log('movies found', moviesJson);
+			// console.log('movies found', moviesJson);
 			// console.log('here');
 
 			res.status(200).send(result);
@@ -303,8 +303,8 @@ app.get('/getPort', (req, res) => {
 	res.send({ port: port + 1 });
 });
 
-server.listen(41262, () => {
-	console.log(`running on port 41262`);
+server.listen(5000, () => {
+	console.log(`running on port 5000`);
 });
 
 io.on('connection', (socket) => {
