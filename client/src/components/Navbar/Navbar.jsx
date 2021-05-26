@@ -286,6 +286,7 @@ const Navbar = ({
 									<form>
 										<TextField
 											autoFocus
+											autoComplete={false}
 											margin="dense"
 											id="username"
 											label="Username"
@@ -299,6 +300,7 @@ const Navbar = ({
 											}}
 										/>
 										<TextField
+											autoComplete={false}
 											margin="dense"
 											id="password"
 											label="Password"
@@ -359,6 +361,7 @@ const Navbar = ({
 									<form>
 										<TextField
 											autoFocus
+											autoComplete={false}
 											margin="dense"
 											id="username"
 											label="Username"
@@ -372,6 +375,7 @@ const Navbar = ({
 											}}
 										/>
 										<TextField
+											autoComplete={false}
 											margin="dense"
 											id="password"
 											label="Password"
@@ -385,6 +389,7 @@ const Navbar = ({
 											fullWidth
 										/>
 										<TextField
+											autoComplete={false}
 											margin="dense"
 											id="cpassword"
 											label="Confirm Password"
