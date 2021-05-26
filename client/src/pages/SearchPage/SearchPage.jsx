@@ -14,53 +14,52 @@ import Notification from '../../components/Notification/Notification';
 
 function SearchPage({ query, searchResult, setSearchResult }) {
 	const q = useParams();
-	let t = Date.now();
-	t.setSeconds(t.getSeconds() + 10);
-	const [
-		stuck,
-		setStuck
-	] = useState(false);
+
 	const [
 		notificationMessage,
 		setNotificationMessage
 	] = useState(null);
-	const timer = setInterval(() => {
-		if (t == Date.now()) setStuck(true);
-	}, 1000);
 	useEffect(
 		() => {
 			axios({
-				url    : 'http://localhost:5000/search',
-				method : 'post',
-				data   : {
+				url                 : 'http://localhost:5000/search',
+				method              : 'post',
+				data                : {
 					query : q.query
-				}
+				},
+				timeout             : 10000,
+				timeoutErrorMessage : 'Request timed out'
 			})
 				.then((response) => {
 					setSearchResult({ ...response.data });
-					clearInterval(timer);
 				})
 				.catch((error) => {
-					setNotificationMessage(error.response.data.message);
-					setInterval(() => {
+					console.log(error.message);
+					if (!!error.response && !!error.response.data)
+						setNotificationMessage(error.response.data.message);
+					else setNotificationMessage(error.message);
+					setTimeout(() => {
 						setNotificationMessage(null);
 					}, 5000);
-					clearInterval(timer);
 				});
 		},
 		[
 			query
 		]
 	);
-	if (stuck) {
-		clearInterval(timer);
-		setNotificationMessage('An error occurred :(');
-		setInterval(() => {
-			setNotificationMessage(null);
-		}, 5000);
-		clearTimeout(timer);
-	}
-	if (!!!searchResult) return <Spinner />;
+
+	if (!!!searchResult)
+		return (
+			<React.Fragment>
+				<Spinner />{' '}
+				{!!notificationMessage && (
+					<Notification
+						message={notificationMessage}
+						style={{ zIndex: 10 }}
+					/>
+				)}
+			</React.Fragment>
+		);
 	return (
 		<React.Fragment>
 			{!!searchResult && (
@@ -101,7 +100,12 @@ function SearchPage({ query, searchResult, setSearchResult }) {
 					)}
 				</div>
 			)}
-			<Notification message={notificationMessage} />
+			{!!notificationMessage && (
+				<Notification
+					message={notificationMessage}
+					style={{ zIndex: 10 }}
+				/>
+			)}
 		</React.Fragment>
 	);
 }

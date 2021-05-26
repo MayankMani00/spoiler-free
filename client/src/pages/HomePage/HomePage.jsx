@@ -73,7 +73,7 @@ function HomePage() {
 			<Grid container className={classes.root}>
 				<ThemeProvider theme={theme}>
 					{movies.map((movie) => (
-						<MoviePreview key={movie.id} movie={movie} />
+						<MoviePreview key={movie.imdbID} movie={movie} />
 					))}
 				</ThemeProvider>
 			</Grid>

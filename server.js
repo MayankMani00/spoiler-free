@@ -3,7 +3,6 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
 const fetch = require('node-fetch');
-const { response } = require('express');
 const cookieParser = require('cookie-parser');
 const db = require('./index');
 var jwt = require('jsonwebtoken');
@@ -66,11 +65,11 @@ app.post('/search', (req, res) => {
 		movies : ''
 	};
 
-	console.log({
-		GBOOKS : process.env.GBOOKS_API_KEY,
-		OMDB   : process.env.OMDB_API_KEY
-	});
 	const getData = async () => {
+		console.log({
+			GBOOKS : process.env.GBOOKS_API_KEY,
+			OMDB   : process.env.OMDB_API_KEY
+		});
 		try {
 			let bookResponse = await fetch(
 				`https://www.googleapis.com/books/v1/volumes?q=${q}&key=${process
@@ -82,7 +81,7 @@ app.post('/search', (req, res) => {
 			}
 			let bookJson = await bookResponse.json();
 			result.books = bookJson;
-
+			console.log('books found', bookJson);
 			let showsResponse = await fetch(
 				`https://api.tvmaze.com/search/shows?q=${q}`
 			);
@@ -92,6 +91,7 @@ app.post('/search', (req, res) => {
 			}
 			let showsJson = await showsResponse.json();
 			result.shows = showsJson;
+			console.log('shows found', showJson);
 
 			let moviesResponse = await fetch(
 				`https://www.omdbapi.com/?apikey=${process.env
@@ -103,7 +103,8 @@ app.post('/search', (req, res) => {
 			}
 			let moviesJson = await moviesResponse.json();
 			result.movies = moviesJson;
-			console.log(result.movies);
+			console.log('movies found', movieJson);
+
 			res.send(result);
 		} catch (e) {
 			res.status(400).send({ message: 'An error occurred :(' });
@@ -124,8 +125,11 @@ app.post('/getMovie', (req, res) => {
 
 const getChatHistory = async (req, res, next) => {
 	try {
+		var token = req.cookies.spoiler_free_access_token;
 		var verified = jwt.verify(token, process.env.SECRET_KEY);
+		console.log(token);
 	} catch (e) {
+		console.log(token);
 		res.status(400).send({ message: 'Invalid login!' });
 	}
 	try {
@@ -145,7 +149,10 @@ const getChatHistory = async (req, res, next) => {
 		// console.log('sent history: ', room);
 		res.status(200).send(room);
 	} catch (e) {
-		return next({ status: 400, message: e.message });
+		return next({
+			status  : 400,
+			message : 'Error while loading chat history'
+		});
 	}
 };
 
@@ -236,6 +243,7 @@ const joinRoom = async (room, username, joined = false) => {
 
 app.post('/joinRoom', (req, res) => {
 	try {
+		var token = req.cookies.spoiler_free_access_token;
 		var verified = jwt.verify(token, process.env.SECRET_KEY);
 	} catch (e) {
 		res.status(400).send({ message: 'Invalid login!' });
@@ -302,14 +310,18 @@ io.on('connection', (socket) => {
 			io.to(roomId).emit('chat-message', message);
 			// let room = await db.Room.findOne({ id: roomId });
 			// await room.messages.push(message);
-			db.Room.findOneAndUpdate(
-				{ id: roomId },
-				{ $push: { messages: message } },
-				function(err, success) {
-					if (err) console.log(err);
-					else console.log(success);
-				}
-			);
+			try {
+				db.Room.findOneAndUpdate(
+					{ id: roomId },
+					{ $push: { messages: message } },
+					function(err, success) {
+						if (err) console.log(err);
+						else console.log(success);
+					}
+				);
+			} catch (e) {
+				console.log(e.message);
+			}
 		};
 		send(msg);
 	});

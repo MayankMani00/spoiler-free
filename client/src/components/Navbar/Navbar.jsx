@@ -37,7 +37,7 @@ import './Navbar.css';
 function isValid(str) {
 	// console.log(str);
 	var code, i, len;
-	if (str.length < 6) return 0;
+	if (!str || str.length < 6) return 0;
 	for (i = 0, len = str.length; i < len; i++) {
 		code = str.charCodeAt(i);
 		if (
@@ -122,7 +122,7 @@ const Navbar = ({
 			}, 5000);
 			return;
 		}
-		if (password.length < 6) {
+		if (!password || password.length < 6) {
 			setNotificationMessage(
 				'Password must be longer than 6 characters!'
 			);
@@ -181,7 +181,7 @@ const Navbar = ({
 			}, 5000);
 			return;
 		}
-		if (password.length < 6) {
+		if (!password || password.length < 6) {
 			setNotificationMessage(
 				'Password must be longer than 6 characters!'
 			);

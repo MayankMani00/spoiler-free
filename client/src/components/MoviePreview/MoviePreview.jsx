@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './MoviePreview.css';
 
 const MoviePreview = (movie) => {
-	console.log(movie.movie);
+	// console.log(movie.movie);
 	if (!!movie.movie) movie = movie.movie;
 	let { imdbID, Title, Year, Poster } = movie;
 

@@ -11,7 +11,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Notification from '../Notification/Notification';
 
-const MessageTypingArea = ({ socket, username, roomId }) => {
+const MessageTypingArea = ({ socket, username, roomId, sendError }) => {
 	const [
 		newMessage,
 		setNewMessage
@@ -19,14 +19,16 @@ const MessageTypingArea = ({ socket, username, roomId }) => {
 	const handleSubmit = (e) => {
 		// const msg = e.target[0].value;
 		const msg = newMessage;
-		if (msg) {
+		if (!!msg) {
 			socket.emit('chat-message', {
 				username : username,
 				msg      : msg,
 				roomId   : roomId
 			});
-			console.log('emitted');
+			// console.log('emitted');
 			setNewMessage('');
+		} else {
+			sendError("Message can't be empty");
 		}
 	};
 	return (
@@ -78,14 +80,21 @@ const RoomChat = ({ username, room, socket }) => {
 
 	const getHistory = async (room) => {
 		// console.log(room);
-		const res = await axios({
-			method : 'post',
-			url    : '/getChatHistory',
-			data   : { room: room.id }
-		});
-		const data = await res.data;
-		// console.log(res, data);
-		setMessages(data.messages);
+		try {
+			const res = await axios({
+				method : 'post',
+				url    : '/getChatHistory',
+				data   : { room: room.id }
+			});
+			const data = await res.data;
+			// console.log(res, data);
+			setMessages(data.messages);
+		} catch (e) {
+			setNotificationMessage(e.response.data.message);
+			setTimeout(() => {
+				setNotificationMessage(null);
+			}, 5000);
+		}
 	};
 	useEffect(() => {
 		//establish socket connection here
@@ -150,6 +159,7 @@ const RoomChat = ({ username, room, socket }) => {
 				socket={socket}
 				username={username}
 				roomId={room.id}
+				sendError={setNotificationMessage}
 			/>
 			{!!notificationMessage && (
 				<Notification message={notificationMessage} />
