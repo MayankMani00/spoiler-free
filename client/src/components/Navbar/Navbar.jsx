@@ -100,14 +100,13 @@ const Navbar = ({
 			}
 		};
 		try {
-			// console.log(Cookies.get('spoiler_free_access_token'));
 			initialize();
 		} catch (e) {
 			// console.log('error', e);
-			setNotificationMessage(e.message);
-			setTimeout(() => {
-				setNotificationMessage(null);
-			}, 5000);
+			// setNotificationMessage(e.message);
+			// setTimeout(() => {
+			// 	setNotificationMessage(null);
+			// }, 5000);
 		}
 		return () => {
 			// console.log('navbar unmounted');
