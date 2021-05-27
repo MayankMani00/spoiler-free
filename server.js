@@ -10,7 +10,6 @@ var jwt = require('jsonwebtoken');
 const auth = require('./auth');
 const compression = require('compression');
 
-// parse application/json
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
 const app = express();
@@ -28,7 +27,6 @@ app.use((req, res, next) => {
 		'Access-Control-Allow-Methods',
 		'PUT, GET, POST, DELETE, OPTIONS'
 	);
-	// res.setHeader('Access-Control-Allow-Credentials', true);
 	res.header(
 		'Access-Control-Allow-Headers',
 		'Origin, X-Requested-With, Content-Type, Accept, Authorization'
@@ -40,18 +38,13 @@ if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'));
 }
 
-// app.get('*', (request, response) => {
-// 	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-// });
+app.get('*', (request, response) => {
+	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
 
 app.get('/robots.txt', (req, res) => {
 	res.sendFile(path.join(__dirname, 'client/build', 'robots.txt'));
 });
-
-// app.listen(port, (error) => {
-// 	if (error) throw error;
-// 	console.log('Server running on port ' + port);
-// });
 
 app.post('/login', auth.login);
 app.post('/signup', auth.signup);
@@ -63,12 +56,8 @@ app.post('/search', (req, res) => {
 		shows  : '',
 		movies : ''
 	};
-	// console.log(q);
+
 	const getData = async () => {
-		console.log({
-			GBOOKS : process.env.GBOOKS_API_KEY,
-			OMDB   : process.env.OMDB_API_KEY
-		});
 		try {
 			let bookJson;
 			try {
@@ -86,7 +75,7 @@ app.post('/search', (req, res) => {
 				bookJson = {};
 			}
 			result.books = bookJson;
-			// console.log('books found', bookJson);
+
 			let showsJson;
 			try {
 				let showsResponse = await fetch(
@@ -98,13 +87,11 @@ app.post('/search', (req, res) => {
 					throw new Error(message);
 				}
 				showsJson = await showsResponse.json();
-				// console.log(showsJson);
 			} catch (e) {
 				console.log('error', e);
 				showsJson = {};
 			}
 			result.shows = showsJson;
-			// console.log('shows found', showsJson);
 
 			let moviesJson;
 			try {
@@ -117,15 +104,11 @@ app.post('/search', (req, res) => {
 					throw new Error(message);
 				}
 				moviesJson = await moviesResponse.json();
-				// console.log('here');
-				// console.log(moviesJson);
 			} catch (e) {
 				console.log('error', e);
 				moviesJson = {};
 			}
 			result.movies = moviesJson;
-			// console.log('movies found', moviesJson);
-			// console.log('here');
 
 			res.status(200).send(result);
 		} catch (e) {
@@ -156,26 +139,12 @@ const getChatHistory = async (req, res, next) => {
 	try {
 		var token = req.cookies.spoiler_free_access_token;
 		var verified = jwt.verify(token, process.env.SECRET_KEY);
-		// console.log(token);
 	} catch (e) {
-		// console.log(token);
 		res.status(400).send({ message: 'Invalid login!' });
 	}
 	try {
 		let roomReqId = req.body.room;
 		let room = await db.Room.findOne({ id: roomReqId });
-		// if (room.length == 0) {
-		// 	let username = req.body.username;
-		// 	room = await db.Room.create({
-		// 		title    : roomReq.title,
-		// 		id       : roomReq.Id,
-		// 		users    : [
-		// 			username
-		// 		],
-		// 		messages : []
-		// 	});
-		// }
-		// console.log('sent history: ', room);
 		res.status(200).send(room);
 	} catch (e) {
 		return next({
@@ -190,19 +159,16 @@ app.post('/getChatHistory', getChatHistory);
 const initialize = async (req, res) => {
 	try {
 		var token = req.cookies.spoiler_free_access_token;
-		// console.log(req.cookies, token);
 		var verified = jwt.verify(token, process.env.SECRET_KEY);
 		const username = verified.username;
 		let user = await db.User.findOne({
 			username : username
 		});
-		// console.log(verified);
 		const { rooms } = user;
 		res
 			.status(200)
 			.send({ returned: true, username: username, rooms: rooms });
 	} catch (e) {
-		// console.log(e.message);
 		res.status(400).send({
 			returned : false,
 			message  : `An error occured: ${e.message}`
@@ -213,7 +179,6 @@ const initialize = async (req, res) => {
 app.get('/initialize', initialize);
 
 const joinRoom = async (room, username) => {
-	// console.log('room', room);
 	try {
 		let roomReq = await db.Room.findOne({ id: room.id });
 		if (!!!roomReq || roomReq.length == 0) {
@@ -227,7 +192,6 @@ const joinRoom = async (room, username) => {
 			});
 			joined = true;
 		}
-		// console.log(roomReq);
 		roomReq.users.push(username);
 		db.User.findOneAndUpdate(
 			{ username: username },
@@ -243,7 +207,6 @@ const joinRoom = async (room, username) => {
 			},
 			function(err, success) {
 				if (err) console.log(err);
-				// else console.log(success);
 			}
 		);
 		return 1;
@@ -260,7 +223,6 @@ app.post('/joinRoom', (req, res) => {
 		res.status(400).send({ message: 'Invalid login!' });
 	}
 	let { room, username } = req.body;
-	// console.log(room);
 	try {
 		joinRoom(room, username);
 		res.status(200).send({ message: 'ok' });
@@ -270,7 +232,6 @@ app.post('/joinRoom', (req, res) => {
 });
 
 app.get('/logout', (req, res) => {
-	// console.log('logged out');
 	res.cookie('spoiler_free_access_token', '', {
 		expires   : new Date(0),
 		overwrite : true
@@ -281,9 +242,7 @@ app.get('/logout', (req, res) => {
 const http = require('http');
 const server = http.createServer(app);
 const { Server } = require('socket.io');
-// const socketio = require('socket.io');
 
-// const httpServer = createServer();
 const io = new Server(server, {
 	cors    : [
 		'https://localhost:3000',
@@ -300,24 +259,18 @@ server.listen(port, () => {
 });
 
 io.on('connection', (socket) => {
-	// console.log('a user connected');
 	var username, room, roomReq;
 
 	socket.on('join', (options) => {
 		username = options.username;
 		room = options.roomReq;
 		joined = options.joined;
-		// console.log(room);
 		if (!joined) roomReq = joinRoom(room, username);
-		// console.log('joined ' + room);
 		socket.join(room.id);
-		// console.log(typeof room.id);
-		// io.in(room).emit('newUserJoined', { msg: `${username} has joined` });
 	});
 
 	socket.on('chat-message', (msg) => {
 		const send = async ({ username, msg, roomId }) => {
-			// console.log('chat-msg', roomReq);
 			let current = new Date();
 			let cDate =
 				current.getDate() +
@@ -338,17 +291,13 @@ io.on('connection', (socket) => {
 				body   : msg,
 				sentAt : dateTime
 			};
-			// console.log('type: ', typeof roomId);
 			io.to(roomId).emit('chat-message', message);
-			// let room = await db.Room.findOne({ id: roomId });
-			// await room.messages.push(message);
 			try {
 				db.Room.findOneAndUpdate(
 					{ id: roomId },
 					{ $push: { messages: message } },
 					function(err, success) {
 						if (err) console.log(err);
-						// else console.log(success);
 					}
 				);
 			} catch (e) {
@@ -358,7 +307,5 @@ io.on('connection', (socket) => {
 		send(msg);
 	});
 
-	socket.on('disconnect', () => {
-		// console.log('a user disconnected');
-	});
+	socket.on('disconnect', () => {});
 });

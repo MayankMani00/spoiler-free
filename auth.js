@@ -21,7 +21,7 @@ const login = async (req, res, next) => {
 	//console.log(req.cookies);
 	//validate username & password
 	try {
-		console.log(req.cookies);
+		// console.log(req.cookies);
 		let username = req.body.username;
 		let password = req.body.password;
 		// console.log()

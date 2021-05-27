@@ -35,7 +35,6 @@ import Logo from './spoiler-free-logo.svg';
 import './Navbar.css';
 
 function isValid(str) {
-	// console.log(str);
 	var code, i, len;
 	if (!str || str.length < 6) return 0;
 	for (i = 0, len = str.length; i < len; i++) {
@@ -84,16 +83,13 @@ const Navbar = ({
 	] = useState('');
 
 	useEffect(() => {
-		// console.log('navbar mounted');
 		const initialize = async () => {
-			// axios.defaults.withCredentials = true;
 			const res = await axios({
 				method : 'get',
 				url    : '/initialize'
 			});
 			const { data } = res;
 			if (!!data.returned) {
-				// console.log('here');
 				setUsername(data.username);
 				initializeRooms(data.rooms);
 				userLogToggle(true);
@@ -102,15 +98,12 @@ const Navbar = ({
 		try {
 			initialize();
 		} catch (e) {
-			// console.log('error', e);
 			// setNotificationMessage(e.message);
 			// setTimeout(() => {
 			// 	setNotificationMessage(null);
 			// }, 5000);
 		}
-		return () => {
-			// console.log('navbar unmounted');
-		};
+		return () => {};
 	}, []);
 
 	const handleSignupSubmit = async () => {
@@ -148,21 +141,14 @@ const Navbar = ({
 				url    : '/signup',
 				data   : { username: username, password: password }
 			});
-			// console.log(res);
 			const { data } = res;
-			// Cookies.set('spoiler_free_access_token', data.token, {
-			// 	expires : 2
-			// });
 			initializeRooms(data.rooms);
 			setUsername(username);
-			// username = '';
-			// password = '';
 			setUsernameState('');
 			setPasswordState('');
 			userLogToggle(true);
 			setOpenSignup(false);
 		} catch (e) {
-			// console.log(e.message);
 			setNotificationMessage(e.response.data.message);
 			setTimeout(() => {
 				setNotificationMessage(null);
@@ -170,9 +156,6 @@ const Navbar = ({
 		}
 	};
 	const handleLoginSubmit = async () => {
-		//starts here
-		// console.log(username, password);
-		//ends here
 		if (isValid(username) !== 3) {
 			const error = [
 				'Username must be longer than 6 characters!',
@@ -194,18 +177,15 @@ const Navbar = ({
 			}, 5000);
 			return;
 		}
-		//set token in cookie
-
 		try {
-			// console.log('here');
 			const res = await axios({
 				method : 'post',
 				url    : '/login',
 				data   : { username: username, password: password }
 			});
-			// console.log(res);
+
 			const { data } = res;
-			// console.log(data);
+
 			initializeRooms(data.rooms);
 			setUsername(username);
 			setUsernameState('');
@@ -213,7 +193,6 @@ const Navbar = ({
 			userLogToggle(true);
 			setOpenLogin(false);
 		} catch (e) {
-			// console.log(e, e.response.data.message);
 			setNotificationMessage(e.response.data.message);
 			setTimeout(() => {
 				setNotificationMessage(null);
@@ -299,7 +278,6 @@ const Navbar = ({
 											fullWidth
 											value={username}
 											onChange={(e) => {
-												// username = e.target.value;
 												setUsernameState(
 													e.target.value
 												);
@@ -313,7 +291,6 @@ const Navbar = ({
 											type="password"
 											value={password}
 											onChange={(e) => {
-												// password = e.target.value;
 												setPasswordState(
 													e.target.value
 												);
@@ -356,9 +333,6 @@ const Navbar = ({
 							</Button>
 							<Dialog
 								open={openSignup}
-								// onClose={() => {
-								// 	setOpenLogin(false);
-								// }}
 								aria-labelledby="form-dialog-title"
 							>
 								<DialogTitle id="form-dialog-title">
