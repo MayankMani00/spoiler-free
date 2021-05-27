@@ -92,11 +92,14 @@ const ShowDetails = () => {
 				<Container maxWidth="md" className="show-episodes">
 					<Paper
 						elevation={2}
-						key={-1}
+						key={episode.id}
 						style={{
-							margin    : '2px',
-							marginTop : '10px',
-							padding   : '5px 10px'
+							display        : 'flex',
+							justifyContent : 'space-between',
+							alignItems     : 'center',
+							margin         : '2px',
+							marginTop      : '10px',
+							padding        : '5px 10px'
 						}}
 					>
 						<Typography variant="subtitle2">
@@ -134,17 +137,20 @@ const ShowDetails = () => {
 					})}
 					<Paper
 						elevation={2}
-						key={0}
+						key={episode.id}
 						style={{
-							margin    : '2px',
-							marginTop : '10px',
-							padding   : '5px 10px'
+							display        : 'flex',
+							justifyContent : 'space-between',
+							alignItems     : 'center',
+							margin         : '2px',
+							marginTop      : '10px',
+							padding        : '5px 10px'
 						}}
 					>
 						<Typography variant="subtitle2">Finished</Typography>
 					</Paper>
 				</Container>
-				<div className="active-rooms">1</div>
+				{/* <div className="active-rooms">1</div> */}
 			</Container>
 		)
 	);

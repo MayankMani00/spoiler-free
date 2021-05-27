@@ -45,6 +45,7 @@ const login = async (req, res, next) => {
 		// console.log(user);
 		let { _id } = user;
 		let { rooms } = user;
+		// console.log(rooms.length);
 		let isMatch = await user.comparePassword(password);
 		if (isMatch) {
 			let token = jwt.sign(

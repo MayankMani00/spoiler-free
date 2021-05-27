@@ -34,7 +34,14 @@ const MessageTypingArea = ({ socket, username, roomId, sendError }) => {
 		}
 	};
 	return (
-		<form className="input-area">
+		<form
+			className="input-area"
+			onSubmit={(e) => {
+				e.preventDefault();
+				// console.log(newMessage);
+				handleSubmit();
+			}}
+		>
 			<TextField
 				autoFocus
 				margin="dense"
@@ -45,6 +52,7 @@ const MessageTypingArea = ({ socket, username, roomId, sendError }) => {
 				onChange={(e) => {
 					setNewMessage(e.target.value);
 				}}
+				value={newMessage}
 				style={{ width: '80%', color: 'white !important' }}
 			/>
 			<Button
@@ -54,13 +62,6 @@ const MessageTypingArea = ({ socket, username, roomId, sendError }) => {
 					right       : '1rem',
 					color       : 'white',
 					borderColor : 'white'
-				}}
-				onClick={(e) => {
-					e.target.value = '';
-					e.preventDefault();
-					// console.log(newMessage);
-					handleSubmit();
-					setNewMessage('');
 				}}
 				type="submit"
 			>

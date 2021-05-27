@@ -93,6 +93,7 @@ const Navbar = ({
 			});
 			const { data } = res;
 			if (!!data.returned) {
+				// console.log('here');
 				setUsername(data.username);
 				initializeRooms(data.rooms);
 				userLogToggle(true);
@@ -102,7 +103,7 @@ const Navbar = ({
 			// console.log(Cookies.get('spoiler_free_access_token'));
 			initialize();
 		} catch (e) {
-			console.log('error');
+			console.log('error', e);
 		}
 		return () => {
 			// console.log('navbar unmounted');
@@ -240,12 +241,13 @@ const Navbar = ({
 					<SearchBox />
 					{loggedIn ? (
 						<div>
-							<IconButton style={{ marginRight: '5px' }}>
-								<ForumIcon
-									onClick={() => {
-										userChatToggle(!openChat);
-									}}
-								/>
+							<IconButton
+								style={{ marginRight: '5px' }}
+								onClick={() => {
+									userChatToggle(!openChat);
+								}}
+							>
+								<ForumIcon />
 							</IconButton>
 							<Button
 								style={{ color: 'white', borderColor: 'white' }}
@@ -286,12 +288,13 @@ const Navbar = ({
 									<form>
 										<TextField
 											autoFocus
-											autoComplete={false}
+											autoComplete="off"
 											margin="dense"
 											id="username"
 											label="Username"
 											type="text"
 											fullWidth
+											value={username}
 											onChange={(e) => {
 												// username = e.target.value;
 												setUsernameState(
@@ -300,11 +303,12 @@ const Navbar = ({
 											}}
 										/>
 										<TextField
-											autoComplete={false}
+											autoComplete="off"
 											margin="dense"
 											id="password"
 											label="Password"
 											type="password"
+											value={password}
 											onChange={(e) => {
 												// password = e.target.value;
 												setPasswordState(
@@ -361,27 +365,27 @@ const Navbar = ({
 									<form>
 										<TextField
 											autoFocus
-											autoComplete={false}
+											autoComplete="off"
 											margin="dense"
 											id="username"
 											label="Username"
 											type="text"
 											fullWidth
+											value={username}
 											onChange={(e) => {
-												// username = e.target.value;
 												setUsernameState(
 													e.target.value
 												);
 											}}
 										/>
 										<TextField
-											autoComplete={false}
+											autoComplete="off"
 											margin="dense"
 											id="password"
 											label="Password"
 											type="password"
+											value={password}
 											onChange={(e) => {
-												// password = e.target.value;
 												setPasswordState(
 													e.target.value
 												);
@@ -389,11 +393,12 @@ const Navbar = ({
 											fullWidth
 										/>
 										<TextField
-											autoComplete={false}
+											autoComplete="off"
 											margin="dense"
 											id="cpassword"
 											label="Confirm Password"
 											type="password"
+											value={cPassword}
 											onChange={(e) => {
 												cPassword = e.target.value;
 											}}

@@ -28,7 +28,9 @@ const ShowPreview = ({ show }) => {
 			<h6 className="show-card-authors">
 				{genres.map((genre) => genre + ', ')}
 			</h6>
-			<p className="show-card-description">{ReactHtmlParser(summary)}</p>
+			<div className="show-card-description">
+				{ReactHtmlParser(summary)}
+			</div>
 		</div>
 	);
 };

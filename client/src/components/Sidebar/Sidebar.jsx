@@ -26,13 +26,12 @@ const Sidebar = ({ rooms, userChatToggle }) => {
 		<div className="chat-popup">
 			<div className="chat-navbar">
 				{openRoomId !== -1 && (
-					<IconButton>
-						<ArrowBackIosIcon
-							style={{ color: 'white' }}
-							onClick={() => {
-								setOpenRoomId(-1);
-							}}
-						/>
+					<IconButton
+						onClick={() => {
+							setOpenRoomId(-1);
+						}}
+					>
+						<ArrowBackIosIcon style={{ color: 'white' }} />
 					</IconButton>
 				)}
 				<IconButton
@@ -51,10 +50,9 @@ const Sidebar = ({ rooms, userChatToggle }) => {
 			{openRoomId === -1 ? (
 				<ul className="room-list">
 					{rooms.map((item) => (
-						<React.Fragment>
+						<React.Fragment key={item.id}>
 							<li
 								className="room-in-list"
-								key={item.id}
 								onClick={() => {
 									handleClick(item);
 								}}

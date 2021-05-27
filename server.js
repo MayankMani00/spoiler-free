@@ -43,9 +43,9 @@ if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'));
 }
 
-app.get('*', (request, response) => {
-	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
+// app.get('*', (request, response) => {
+// 	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+// });
 
 app.get('/robots.txt', (req, res) => {
 	res.sendFile(path.join(__dirname, 'client/build', 'robots.txt'));
@@ -66,7 +66,7 @@ app.post('/search', (req, res) => {
 		shows  : '',
 		movies : ''
 	};
-	console.log(q);
+	// console.log(q);
 	const getData = async () => {
 		console.log({
 			GBOOKS : process.env.GBOOKS_API_KEY,
@@ -85,7 +85,7 @@ app.post('/search', (req, res) => {
 				}
 				bookJson = await bookResponse.json();
 			} catch (e) {
-				console.log(e);
+				console.log('error', e);
 				bookJson = {};
 			}
 			result.books = bookJson;
@@ -159,9 +159,9 @@ const getChatHistory = async (req, res, next) => {
 	try {
 		var token = req.cookies.spoiler_free_access_token;
 		var verified = jwt.verify(token, process.env.SECRET_KEY);
-		console.log(token);
+		// console.log(token);
 	} catch (e) {
-		console.log(token);
+		// console.log(token);
 		res.status(400).send({ message: 'Invalid login!' });
 	}
 	try {
@@ -192,7 +192,6 @@ app.post('/getChatHistory', getChatHistory);
 
 const initialize = async (req, res) => {
 	try {
-		// console.log('called');
 		var token = req.cookies.spoiler_free_access_token;
 		// console.log(req.cookies, token);
 		var verified = jwt.verify(token, process.env.SECRET_KEY);
@@ -216,7 +215,7 @@ const initialize = async (req, res) => {
 
 app.get('/initialize', initialize);
 
-const joinRoom = async (room, username, joined = false) => {
+const joinRoom = async (room, username) => {
 	// console.log('room', room);
 	try {
 		let roomReq = await db.Room.findOne({ id: room.id });
@@ -232,7 +231,7 @@ const joinRoom = async (room, username, joined = false) => {
 			joined = true;
 		}
 		// console.log(roomReq);
-		if (!joined) roomReq.users.push(username);
+		roomReq.users.push(username);
 		db.User.findOneAndUpdate(
 			{ username: username },
 			{
@@ -247,7 +246,7 @@ const joinRoom = async (room, username, joined = false) => {
 			},
 			function(err, success) {
 				if (err) console.log(err);
-				else console.log(success);
+				// else console.log(success);
 			}
 		);
 		return 1;
@@ -266,7 +265,7 @@ app.post('/joinRoom', (req, res) => {
 	let { room, username } = req.body;
 	// console.log(room);
 	try {
-		joinRoom(room, username, false);
+		joinRoom(room, username);
 		res.status(200).send({ message: 'ok' });
 	} catch (e) {
 		res.status(400).send({ message: 'An error occurred!' });
@@ -299,10 +298,6 @@ const io = new Server(server, {
 	]
 });
 
-app.get('/getPort', (req, res) => {
-	res.send({ port: port + 1 });
-});
-
 server.listen(port, () => {
 	console.log(`running on port ${port}`);
 });
@@ -316,7 +311,7 @@ io.on('connection', (socket) => {
 		room = options.roomReq;
 		joined = options.joined;
 		// console.log(room);
-		roomReq = joinRoom(room, username, joined);
+		if (!joined) roomReq = joinRoom(room, username);
 		// console.log('joined ' + room);
 		socket.join(room.id);
 		// console.log(typeof room.id);
