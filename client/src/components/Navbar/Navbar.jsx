@@ -103,7 +103,11 @@ const Navbar = ({
 			// console.log(Cookies.get('spoiler_free_access_token'));
 			initialize();
 		} catch (e) {
-			console.log('error', e);
+			// console.log('error', e);
+			setNotificationMessage(e.message);
+			setTimeout(() => {
+				setNotificationMessage(null);
+			}, 5000);
 		}
 		return () => {
 			// console.log('navbar unmounted');
@@ -145,7 +149,7 @@ const Navbar = ({
 				url    : '/signup',
 				data   : { username: username, password: password }
 			});
-			console.log(res);
+			// console.log(res);
 			const { data } = res;
 			// Cookies.set('spoiler_free_access_token', data.token, {
 			// 	expires : 2
@@ -159,7 +163,7 @@ const Navbar = ({
 			userLogToggle(true);
 			setOpenSignup(false);
 		} catch (e) {
-			console.log(e.message);
+			// console.log(e.message);
 			setNotificationMessage(e.response.data.message);
 			setTimeout(() => {
 				setNotificationMessage(null);
@@ -210,7 +214,7 @@ const Navbar = ({
 			userLogToggle(true);
 			setOpenLogin(false);
 		} catch (e) {
-			console.log(e, e.response.data.message);
+			// console.log(e, e.response.data.message);
 			setNotificationMessage(e.response.data.message);
 			setTimeout(() => {
 				setNotificationMessage(null);
