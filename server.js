@@ -9,7 +9,6 @@ var jwt = require('jsonwebtoken');
 
 const auth = require('./auth');
 const compression = require('compression');
-const enforce = require('express-sslify');
 
 // parse application/json
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
@@ -17,7 +16,6 @@ if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(compression());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));

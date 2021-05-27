@@ -90,18 +90,7 @@ const ShowDetails = () => {
 					</Paper>
 				</Container>
 				<Container maxWidth="md" className="show-episodes">
-					<Paper
-						elevation={2}
-						key={episode.id}
-						style={{
-							display        : 'flex',
-							justifyContent : 'space-between',
-							alignItems     : 'center',
-							margin         : '2px',
-							marginTop      : '10px',
-							padding        : '5px 10px'
-						}}
-					>
+					<Paper elevation={2} key={100} className="list-item">
 						<Typography variant="subtitle2">
 							Haven't started yet
 						</Typography>
@@ -137,7 +126,7 @@ const ShowDetails = () => {
 					})}
 					<Paper
 						elevation={2}
-						key={episode.id}
+						key={101}
 						style={{
 							display        : 'flex',
 							justifyContent : 'space-between',

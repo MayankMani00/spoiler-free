@@ -91,40 +91,22 @@ const BookDetails = () => {
 					</Typography>
 				</Paper>
 			</Container>
-			<Paper
-				elevation={2}
-				key={0}
-				style={{
-					display        : 'flex',
-					justifyContent : 'space-between',
-					alignItems     : 'center',
-					margin         : '2px',
-					marginTop      : '10px',
-					padding        : '5px 10px'
-				}}
-			>
-				<Typography variant="subtitle2">Haven't started yet</Typography>
-				<JoinButton
-					target={{ title: title, id: `${bookId}/started` }}
-				/>
-			</Paper>
-			<Paper
-				elevation={2}
-				key={1}
-				style={{
-					display        : 'flex',
-					justifyContent : 'space-between',
-					alignItems     : 'center',
-					margin         : '2px',
-					marginTop      : '10px',
-					padding        : '5px 10px'
-				}}
-			>
-				<Typography variant="subtitle2">Finished</Typography>
-				<JoinButton
-					target={{ title: title, id: `${bookId}/finished` }}
-				/>
-			</Paper>
+			<Container maxWidth="md">
+				<Paper elevation={2} key={0} className="list-item">
+					<Typography variant="subtitle2">
+						Haven't started yet
+					</Typography>
+					<JoinButton
+						target={{ title: title, id: `${bookId}/started` }}
+					/>
+				</Paper>
+				<Paper elevation={2} key={1} className="list-item">
+					<Typography variant="subtitle2">Finished</Typography>
+					<JoinButton
+						target={{ title: title, id: `${bookId}/finished` }}
+					/>
+				</Paper>
+			</Container>
 		</Container>
 	);
 };
