@@ -38,7 +38,7 @@ const SearchBox = ({ setQuery, setSearchResult }) => {
 					// className="search-box"
 					id="outlined-basic"
 					// label="Outlined"
-					placeholder="Search for books..."
+					placeholder="Search..."
 					variant="outlined"
 					size="small"
 					autoComplete="off"
