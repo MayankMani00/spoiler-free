@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.use((req, res, next) => {
-	res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+	res.header('Access-Control-Allow-Origin', '*');
 	res.header(
 		'Access-Control-Allow-Methods',
 		'PUT, GET, POST, DELETE, OPTIONS'
@@ -287,7 +287,7 @@ const { Server } = require('socket.io');
 const io = new Server(server, {
 	cors    : [
 		'https://localhost:3000',
-		'https://fathomless-wave-52070.herokuapp.com/'
+		'https://spoilr-free.herokuapp.com/'
 	],
 	methods : [
 		'GET',
